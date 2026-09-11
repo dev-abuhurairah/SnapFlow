@@ -2,9 +2,13 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp"
     android:height="108dp"
-    android:viewportHeight="108"
-    android:viewportWidth="108">
+    android:viewportWidth="108"
+    android:viewportHeight="108">
     <path
-        android:fillColor="@color/icon_bg"
-        android:pathData="M 0 0 H 192 V 192 H 0 V 0 Z" />
+        android:fillColor="#121212"
+        android:pathData="M0,0h108v108h-108z" />
+    <!-- Subtle dark golden aura circle -->
+    <path
+        android:fillColor="#1C1A14"
+        android:pathData="M54,54m-42,0a42,42 0 1,0 84,0a42,42 0 1,0 -84,0" />
 </vector>

@@ -180,6 +180,11 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
                 android.view.animation.AnimationUtils.loadAnimation(requireContext(), R.anim.splash_fade_in)
             )
         }
+        runCatching {
+            view.findViewById<View>(R.id.snaptube_search_circle_btn)?.setOnClickListener {
+                searchBar?.performClick()
+            }
+        }
 
         homeAdapter =
             HomeAdapter(

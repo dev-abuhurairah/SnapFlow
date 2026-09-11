@@ -59,7 +59,7 @@
             android:dialogTitle="@string/modify_download_card"
             android:entries="@array/modify_download_card"
             android:entryValues="@array/modify_download_card_values"
-            android:defaultValue="@array/modify_download_card_values"
+            android:defaultValue="@array/modify_download_card_default_values"
             app:key="modify_download_card"
             app:title="@string/modify_download_card" />
 

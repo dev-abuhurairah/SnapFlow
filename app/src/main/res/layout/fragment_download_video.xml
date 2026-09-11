@@ -36,6 +36,7 @@
             android:paddingHorizontal="10dp"
             android:divider="@drawable/divider_10dp"
             android:showDividers="middle"
+            android:visibility="gone"
             android:baselineAligned="false">
 
             <com.google.android.material.textfield.TextInputLayout
@@ -81,6 +82,9 @@
             android:layout_height="wrap_content"
             android:paddingHorizontal="10dp"
             android:paddingTop="10dp"
+            android:textColor="#CCCCCC"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:text="@string/video_quality" />
 
         <include layout="@layout/format_item" />
@@ -92,6 +96,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/save_dir"
+            android:visibility="gone"
             android:paddingHorizontal="10dp"
             android:paddingTop="10dp"
             android:paddingBottom="0dp">
@@ -108,11 +113,17 @@
             android:id="@+id/freespace"
             android:paddingHorizontal="20dp"
             android:textSize="13sp"
+            android:visibility="gone"
             android:textColor="@android:color/tab_indicator_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <include layout="@layout/adjust_video" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+            <include layout="@layout/adjust_video" />
+        </LinearLayout>
 
 
     </LinearLayout>

@@ -1028,6 +1028,10 @@
         <item>url</item>
     </string-array>
 
+    <string-array name="modify_download_card_default_values">
+        <item>title</item>
+    </string-array>
+
     <string-array name="subtitle_langs">
         <item>af</item>
         <item>am</item>
