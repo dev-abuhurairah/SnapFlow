@@ -10,7 +10,7 @@
     android:backgroundTint="@android:color/transparent"
     app:checkedIcon="@drawable/snaptube_radio_checked"
     app:checkedIconTint="#FFB800"
-    app:checkedIconGravity="top_end"
+    app:checkedIconGravity="TOP_END"
     app:checkedIconMargin="16dp"
     app:checkedIconSize="22dp"
     app:shapeAppearance="@style/ShapeAppearanceOverlay.Avatar"
