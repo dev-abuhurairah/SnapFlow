@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="24dp"
+    android:clipToPadding="false"
+    android:background="@android:color/transparent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:cardCornerRadius="24dp"
+        app:cardBackgroundColor="#1A1A1A"
+        app:strokeColor="#2C2C2C"
+        app:strokeWidth="1dp"
+        app:cardElevation="12dp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <!-- Snaptube Top Drag Handle -->
+                <View
+                    android:layout_width="40dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/snaptube_drag_handle" />
+
+                <!-- Snaptube Header: "Download video as" (Matches Screenshot 2) -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="6dp">
+
+                    <TextView
+                        android:id="@+id/snaptube_header_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/download_video_as"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent" />
+
+                    <Button
+                        android:id="@+id/bottomsheet_schedule_button"
+                        style="@style/Widget.Material3.Button.IconButton.Filled"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:padding="0dp"
+                        android:outlineProvider="none"
+                        app:icon="@drawable/ic_clock"
+                        app:iconTint="#AAAAAA"
+                        android:contentDescription="@string/schedule"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/bottomsheet_incognito"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/bottomsheet_incognito"
+                        style="@style/Widget.Material3.Button.IconButton.Filled"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:padding="0dp"
+                        android:alpha="0.6"
+                        android:contentDescription="@string/incognito"
+                        android:outlineProvider="none"
+                        app:icon="@drawable/ic_nightly"
+                        app:iconTint="#AAAAAA"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Video Title & Loading Shimmer Container -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="8dp">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_loading_title"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <TextView
+                            android:id="@+id/bottom_sheet_loading_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="2"
+                            android:text="@string/loading"
+                            android:textColor="#FFFFFF"
+                            android:textSize="15sp" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <TextView
+                        android:id="@+id/bottom_sheet_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="2"
+                        android:ellipsize="end"
+                        android:textColor="#E0E0E0"
+                        android:textSize="14sp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/shimmer_loading_subtitle"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/please_wait"
+                            android:textColor="#888888"
+                            android:textSize="12sp" />
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <TextView
+                        android:id="@+id/bottom_sheet_subtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="#888888"
+                        android:textSize="12sp"
+                        app:layout_constraintTop_toBottomOf="@+id/bottom_sheet_title"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Category Tabs (Audio / Video / Command) with Snaptube Yellow Indicator -->
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/download_tablayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="38dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    app:tabIndicatorColor="#FFB800"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabSelectedTextColor="#FFB800"
+                    app:tabTextColor="#888888"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed">
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/audio" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/video" />
+
+                    <com.google.android.material.tabs.TabItem
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="@string/command" />
+
+                </com.google.android.material.tabs.TabLayout>
+
+                <!-- Format List / Options ViewPager -->
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/download_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp" />
+
+                <!-- Bottom Full-Width Yellow Download Button (Matches Screenshot 2) -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/bottomsheet_download_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="4dp"
+                    android:backgroundTint="#FFB800"
+                    app:cornerRadius="26dp"
+                    android:text="@string/download"
+                    android:textColor="#121212"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:icon="@drawable/ic_down"
+                    app:iconTint="#121212"
+                    app:iconGravity="textStart"
+                    android:elevation="2dp" />
+
+                <!-- Source Link Button -->
+                <Button
+                    android:id="@+id/bottom_sheet_link"
+                    style="@style/Widget.Material3.Button.TextButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:singleLine="true"
+                    android:textColor="#888888"
+                    android:textSize="12sp"
+                    app:icon="@drawable/ic_link"
+                    app:iconTint="#888888" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:gravity="end"
+                    android:visibility="gone"
+                    android:paddingBottom="10dp"
+                    android:layout_marginHorizontal="15dp"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/update_item"
+                        style="@style/Widget.Material3.Button.ElevatedButton.Icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:autoLink="all"
+                        android:outlineProvider="none"
+                        android:text="@string/update"
+                        app:icon="@drawable/ic_update" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>
