@@ -202,7 +202,7 @@
     <string name="video_recommendations_summary">Obter vídeos recomendados na tela inicial</string>
     <string name="add_chapters_summary">Marcar segmentos YouTube/SponsorBlock como capítulos do vídeo</string>
     <string name="you_are_going_to_delete_multiple_items">Excluir vários itens</string>
-    <string name="request_permission_desc">Este aplicativo requer \"Permissão de Armazenamento\" para salvar downloads no dispositivo</string>
+    <string name="request_permission_desc">Este aplicativo requer "Permissão de Armazenamento" para salvar downloads no dispositivo</string>
     <string name="sponsorblock_nonmusic">Partes sem música e sem relação com o tema</string>
     <string name="update_ytdl_nightly">Versão beta do yt-dlp</string>
     <string name="adjust_audio">Ajustar áudio</string>
@@ -213,12 +213,12 @@
     <string name="format">Formato</string>
     <string name="select_format">Selecionar formato</string>
     <string name="enable_mtime">Habilitar \'mtime\'</string>
-    <string name="enable_mtime_summary">Definir cabeçalho HTTP \"Last-Modified\" com a hora da última modificação</string>
+    <string name="enable_mtime_summary">Definir cabeçalho HTTP "Last-Modified" com a hora da última modificação</string>
     <string name="preferred_download_type_summary">Guia padrão na qual o cartão de download será mostrado</string>
     <string name="confirm_delete_logs_desc">Toda a lista de logs será excluída.</string>
     <string name="access_all_directories_summary">Permitir que o aplicativo faça downloads em diretórios restritos por padrão</string>
     <string name="freespace">Espaço livre</string>
-    <string name="restrict_filenames_summary">Restringir nomes de arquivos apenas a caracteres ASCII e evite \"&amp;\" e espaços em nomes de arquivos</string>
+    <string name="restrict_filenames_summary">Restringir nomes de arquivos apenas a caracteres ASCII e evite "&amp;" e espaços em nomes de arquivos</string>
     <string name="confirm_terminate">Interromper todos os downloads e forçar o fechamento do aplicativo</string>
     <string name="dont_ask_again">Não perguntar novamente</string>
     <string name="downloads_running_try_later">O assistente de download está em execução. Tente mais tarde</string>
@@ -370,7 +370,7 @@
     <string name="reset_processed_links">Redefinir links já processados</string>
     <string name="thumbnail_format">Formato da miniatura</string>
     <string name="no_download_fragments">Não baixar em fragmentos</string>
-    <string name="no_download_fragments_summary">Não usar arquivos \".part\" e escreva diretamente no arquivo de saída</string>
+    <string name="no_download_fragments_summary">Não usar arquivos ".part" e escreva diretamente no arquivo de saída</string>
     <string name="hour">Hora(s)</string>
     <string name="my_filename_templates">Meus modelos de nome de arquivo</string>
     <string name="prefer_smaller_formats">Preferir formatos menores</string>
@@ -412,8 +412,8 @@
     <string name="weekly">Semanalmente</string>
     <string name="monthly">Mensalmente</string>
     <string name="use_alarm_manager">Usar \'AlarmManager\' em vez de \'WorkManager\' para agendamento</string>
-    <string name="use_alarm_manager_summary">Habilite isto se o \"WorkManager\" for restrito pelo fornecedor do seu dispositivo ou se as tarefas agendadas não forem muito precisas</string>
-    <string name="enable_alarm_permission">Você precisa habilitar a permissão \"SCHEDULE_EXACT_ALARM\" nas configurações do aplicativo.</string>
+    <string name="use_alarm_manager_summary">Habilite isto se o "WorkManager" for restrito pelo fornecedor do seu dispositivo ou se as tarefas agendadas não forem muito precisas</string>
+    <string name="enable_alarm_permission">Você precisa habilitar a permissão "SCHEDULE_EXACT_ALARM" nas configurações do aplicativo.</string>
     <string name="process_downloads_background">"Os downloads ainda estão sendo carregados. Continuar processando-os em segundo plano e iniciar o download? "</string>
     <string name="use_item_url_not_playlist">Usar URL do item em vez do URL da playlist</string>
     <string name="recode_video">Recodificar vídeo</string>
@@ -465,7 +465,7 @@
     <string name="backup_path">Caminho do backup</string>
     <string name="automatic_backup_summary">Fazer backup de tudo automaticamente quando uma nova versão do aplicativo for encontrada</string>
     <string name="write_subs_when_embed_subs">Salvar legendas ao incorporar</string>
-    <string name="write_subs_when_embed_subs_summary">Isso aplicará \"Salvar legendas\" e \"Salvar legendas automáticas\" para baixar os subarquivos e excluí-los após a incorporação</string>
+    <string name="write_subs_when_embed_subs_summary">Isso aplicará "Salvar legendas" e "Salvar legendas automáticas" para baixar os subarquivos e excluí-los após a incorporação</string>
     <string name="generate_potokens">Gerar chave de acesso PO</string>
     <string name="regenerate">Gerar novamente</string>
     <string name="generate_potokens_warning">Habilitando essa opção, será necessário desabilitar os Cookies</string>
@@ -477,7 +477,7 @@
     <string name="reverse">Reverter</string>
     <string name="no_keep_subs">Excluir arquivos de legenda após incorporar</string>
     <string name="manual_po_token_generator">Chave de acesso PO do cliente web</string>
-    <string name="no_keep_subs_summary">Ao usar \"Incluir legendas\" e \"Salvar legendas\", não mantenha os arquivos de legenda após a incorporação</string>
+    <string name="no_keep_subs_summary">Ao usar "Incluir legendas" e "Salvar legendas", não mantenha os arquivos de legenda após a incorporação</string>
     <string name="video_compatible">Vídeo compatível</string>
     <string name="video_compatible_summary">Recodifica o vídeo tornando-o compatível com outros aplicativos</string>
     <string name="no_free_space_warning">Não há espaço livre para esta configuração.</string>

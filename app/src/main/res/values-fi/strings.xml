@@ -56,7 +56,7 @@
     <string name="log_downloads">Tallenna lataukset lokitiedostoon</string>
     <string name="update_template">Päivitä malli</string>
     <string name="preferred_download_type">Suositeltava lataustyyppi</string>
-    <string name="restrict_filenames_summary">Rajoita tiedostonimet vain ASCII-kirjaimiksi ja vältä \"&amp;\" merkkejä ja välejä tiedostonimissä</string>
+    <string name="restrict_filenames_summary">Rajoita tiedostonimet vain ASCII-kirjaimiksi ja vältä "&amp;" merkkejä ja välejä tiedostonimissä</string>
     <string name="kill_app">Lopeta sovellus</string>
     <string name="end">Loppu</string>
     <string name="update_formats_summary">Hae formaatti heti kun latauskortti näkyy</string>

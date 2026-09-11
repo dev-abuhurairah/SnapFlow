@@ -147,7 +147,7 @@
     <string name="help_translate_summary">Traduisez cette application dans votre langue en utilisant Weblate</string>
     <string name="dont_ask_again">Ne plus demander</string>
     <string name="start">Début</string>
-    <string name="restrict_filenames_summary">Limitez les noms de fichiers aux caractères ASCII et évitez les \"&amp;\" et les espaces dans les noms de fichiers</string>
+    <string name="restrict_filenames_summary">Limitez les noms de fichiers aux caractères ASCII et évitez les "&amp;" et les espaces dans les noms de fichiers</string>
     <string name="get_cookies">Obtenir des cookies</string>
     <string name="share">Partager</string>
     <string name="cookies">Cookies</string>
@@ -449,7 +449,7 @@
     <string name="preferred_command_template">Modèle de commande préféré</string>
     <string name="socket_timeout">Délai d\'expiration du socket</string>
     <string name="data_fetching_extra_command">Commande supplémentaire de récupération de données</string>
-    <string name="ytdlp_liked">yt-dlp Liste Vidéos \"J\'aime\" sur YouTube (nécessite des cookies)</string>
+    <string name="ytdlp_liked">yt-dlp Liste Vidéos "J\'aime" sur YouTube (nécessite des cookies)</string>
     <string name="ytdlp_watch_history">yt-dlp Historique de visionnage YouTube (nécessite des cookies)</string>
     <string name="live_stream">En direct</string>
     <string name="live_from_start">Télécharger les vidéos en direct depuis le début</string>

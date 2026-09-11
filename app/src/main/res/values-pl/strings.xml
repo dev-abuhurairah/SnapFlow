@@ -474,7 +474,7 @@
     <string name="custom">Niestandardowe</string>
     <string name="manual_po_token_generator">Token PO klienta sieci web</string>
     <string name="use_code_highlighter">Użyj kodu koloru zakreślenia</string>
-    <string name="potoken">Token \"Proof of Origin\" , Token dowodu pochodzenia</string>
+    <string name="potoken">Token "Proof of Origin" , Token dowodu pochodzenia</string>
     <string name="select_between_desc">Określ zakres elementów do wybrania</string>
     <string name="reverse">Odwróć</string>
     <string name="no_keep_subs">Usuń pliki napisów po osadzeniu</string>
@@ -500,7 +500,7 @@
     <string name="potoken_subs">Token PO (napisy)</string>
     <string name="url_regex">Złącze Regex</string>
     <string name="use_original_url_playlist_summary">Użyj adresu url do playlisty podanego przez użytkownika zamiast tagu playlist_webpage_url z dumpa jsona</string>
-    <string name="potoken_guide">Z autentykacją\n-----------------------\n1. Naciśnij \"logowanie\" aby otworzyć stronę logowania w android WebView.\n2. Zaloguj się do swojego konta google.\n3. Odtwórz dowolny filmik wspierający automatycznie tłumaczone napisy.\n4. Włącz automatycznie tłumaczone napisy aby zobaczyć czy działa.\n\t4.1 Jeśli automatycznie tłumaczone napisy się nie wyświetlają zmień filmik i wykonaj krok 4 jeszcze raz.\n5. Naciśnij OK.\n\nBez autentykacji\n-----------------------\n1. Naciśnij \"Bez autentykacji\".\n2. Wklej link do filmiku.\n3. Poczekaj aż filmik się załaduje i obejrzyj conajmniej 3 sekundy.\n4. Naciśnij OK.</string>
+    <string name="potoken_guide">Z autentykacją\n-----------------------\n1. Naciśnij "logowanie" aby otworzyć stronę logowania w android WebView.\n2. Zaloguj się do swojego konta google.\n3. Odtwórz dowolny filmik wspierający automatycznie tłumaczone napisy.\n4. Włącz automatycznie tłumaczone napisy aby zobaczyć czy działa.\n\t4.1 Jeśli automatycznie tłumaczone napisy się nie wyświetlają zmień filmik i wykonaj krok 4 jeszcze raz.\n5. Naciśnij OK.\n\nBez autentykacji\n-----------------------\n1. Naciśnij "Bez autentykacji".\n2. Wklej link do filmiku.\n3. Poczekaj aż filmik się załaduje i obejrzyj conajmniej 3 sekundy.\n4. Naciśnij OK.</string>
     <string name="no_auth">Bez autentykacji</string>
     <string name="auth">Z autentykacją</string>
     <string name="app_icon">Ikona aplikacji</string>

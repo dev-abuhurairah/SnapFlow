@@ -159,7 +159,7 @@
     <string name="download_rescheduled_to">Sťahovanie preložené na:</string>
     <string name="keep_cache">Uchovávať fragmenty</string>
     <string name="file_size">Veľkosť súboru</string>
-    <string name="restrict_filenames_summary">Obmedzí názvy súborov len na znaky ASCII a vyhne sa znakom \"&amp;\" a medzerám v názvoch súborov</string>
+    <string name="restrict_filenames_summary">Obmedzí názvy súborov len na znaky ASCII a vyhne sa znakom "&amp;" a medzerám v názvoch súborov</string>
     <string name="shortcuts">Skratky</string>
     <string name="sponsorblock">SponsorBlock</string>
     <string name="video_recommendations">Odporúčané videá</string>
@@ -401,8 +401,8 @@
     <string name="reset">Resetovať</string>
     <string name="label_visibility">Viditeľnosť štítkov</string>
     <string name="always">Vždy</string>
-    <string name="restore_info">Stlačením tlačidla \"Obnoviť\" zlúčite uložené údaje s aktuálnymi údajmi.
-\nStlačením tlačidla \"Resetovať\" vymažete a budete používať len uložené údaje v súbore.</string>
+    <string name="restore_info">Stlačením tlačidla "Obnoviť" zlúčite uložené údaje s aktuálnymi údajmi.
+\nStlačením tlačidla "Resetovať" vymažete a budete používať len uložené údaje v súbore.</string>
     <string name="queue">Pásmo</string>
     <string name="use_alarm_manager">Použiť AlarmManager namiesto WorkManageru na plánovanie</string>
     <string name="use_alarm_manager_summary">Zapnite túto funkciu, ak je WorkManager obmedzený výrobcom zariadenia alebo ak naplánované úlohy nie sú príliš presné</string>

@@ -242,7 +242,7 @@
     <string name="search">Претрага</string>
     <string name="keep_cache">Задржи фрагменте</string>
     <string name="file_size">Величина фајла</string>
-    <string name="restrict_filenames_summary">Ограничите називе фајлова само на ASCII знакове и избегавајте \"&amp;\" и размаке у називима фајлова</string>
+    <string name="restrict_filenames_summary">Ограничите називе фајлова само на ASCII знакове и избегавајте "&amp;" и размаке у називима фајлова</string>
     <string name="auto">Аутоматски</string>
     <string name="configure_download">Прилагођавање преузимања</string>
     <string name="shortcuts">Пречице</string>

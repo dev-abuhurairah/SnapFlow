@@ -172,7 +172,7 @@
     <string name="freespace">Bakanteng espasyo</string>
     <string name="link_you_copied">Link na kinopya mo</string>
     <string name="restrict_filenames">Limitahan ang mga filename</string>
-    <string name="restrict_filenames_summary">Limitahan ang mga filename sa mga ASCII na karakter lamang, at iwasan ang \"&amp;\" at mga puwang sa mga filename</string>
+    <string name="restrict_filenames_summary">Limitahan ang mga filename sa mga ASCII na karakter lamang, at iwasan ang "&amp;" at mga puwang sa mga filename</string>
     <string name="kill_app">Itigil ang aplikasyon</string>
     <string name="confirm_terminate">Ihihinto ang lahat ng pag-download at puwersahang isara ang aplikasyon</string>
     <string name="dont_ask_again">Huwag magtanong muli</string>

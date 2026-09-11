@@ -240,7 +240,7 @@
     <string name="confirm_delete_logs_desc">A teljes naplólista végleges törlése.</string>
     <string name="help_translate_summary">Fordítsd le ezt az alkalmazást a nyelvedre a Weblate segítségével</string>
     <string name="clear_temporary_files_summary">Gyorsítótár, infojson és egyéb ideiglenes beállítások törlése</string>
-    <string name="restrict_filenames_summary">A fájlneveket csak ASCII karakterekre korlátozza, és kerülje az \"&amp;\" betűket és a szóközöket a fájlnevekben</string>
+    <string name="restrict_filenames_summary">A fájlneveket csak ASCII karakterekre korlátozza, és kerülje az "&amp;" betűket és a szóközöket a fájlnevekben</string>
     <string name="confirm_terminate">Leállítja az összes letöltést és kényszeríti az alkalmazás bezárását</string>
     <string name="cut">Vágás</string>
     <string name="confirm_delete_cookies_desc">Törölje az összes sütit, véglegesen</string>
@@ -438,7 +438,7 @@
     <string name="data_fetching_extra_command_summary">Parancssablonok engedélyezése, hogy adatlekéréshez kiegészítő parancsként használhatók legyenek</string>
     <string name="disable_write_info_json">Json info írásának le tiltása</string>
     <string name="disable_write_info_json_summary">Minden alkalommal, amikor újraindítja vagy folytatja a letöltést, a yt-dlp újra letölti a JSON adatokat a szerverekről (nem ajánlott).</string>
-    <string name="ytdlp_watch_later">yt-dlp youtube \"megtekintés később\" (cookie szükséges)</string>
+    <string name="ytdlp_watch_later">yt-dlp youtube "megtekintés később" (cookie szükséges)</string>
     <string name="ytdlp_recommnedations">yt-dlp youtube ajánlások (cookie szükséges)</string>
     <string name="ytdlp_liked">yt-dlp youtube kedvelt videok (cookie szükséges)</string>
     <string name="ytdlp_watch_history">yt-dlp youtube nézési előzmény (cookie szükséges)</string>

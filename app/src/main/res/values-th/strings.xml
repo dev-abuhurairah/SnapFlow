@@ -155,7 +155,7 @@
     <string name="orange">สีส้ม</string>
     <string name="finished_download_notification_channel_name">เสร็จสิ้นการดาวน์โหลด</string>
     <string name="finished_download_notification_channel_description">การแจ้งเตือนสำหรับการดาวน์โหลดที่เสร็จสิ้นแล้ว</string>
-    <string name="restrict_filenames_summary">จำกัดชื่อไฟล์เฉพาะอักขระ ASCII โดยหลีกเลี่ยง \"&amp;\" และการเว้นวรรคชื่อไฟล์</string>
+    <string name="restrict_filenames_summary">จำกัดชื่อไฟล์เฉพาะอักขระ ASCII โดยหลีกเลี่ยง "&amp;" และการเว้นวรรคชื่อไฟล์</string>
     <string name="clear_cancelled">ยกเลิกการล้างแล้ว</string>
     <string name="error_restarting_download">เกิดข้อผิดพลาดขณะพยายามเริ่มการดาวน์โหลดใหม่</string>
     <string name="defaultValue">ค่าเริ่มต้น</string>
@@ -251,7 +251,7 @@
     <string name="date_added">วันที่เพิ่ม</string>
     <string name="file_name_template">เทมเพลตของชื่อไฟล์</string>
     <string name="format">ฟอร์แมท</string>
-    <string name="enable_mtime">เปิดใช้งาน \"mtime\"</string>
+    <string name="enable_mtime">เปิดใช้งาน "mtime"</string>
     <string name="command">คำสั่ง</string>
     <string name="downloads_running_try_later">โปรแกรมดาวน์โหลดกำลังทำงานอยู่ ลองอีกครั้งในภายหลัง</string>
     <string name="end">จบ</string>
@@ -293,7 +293,7 @@
     <string name="update_ytdl_master">เวอร์ชันมาสเตอร์ของ yt-dlp</string>
     <string name="update_ytdl_stable">เวอร์ชั่นเสถียรของ yt-dlp</string>
     <string name="buffer_size">ขนาดบัฟเฟอร์</string>
-    <string name="multiple_download_card">การ์ดสำหรับ \"ดาวน์โหลดหลายอัน\"</string>
+    <string name="multiple_download_card">การ์ดสำหรับ "ดาวน์โหลดหลายอัน"</string>
     <string name="format_filter">ตัวกรองของฟอร์แมตไฟล์</string>
     <string name="observe_sources">การสังเกตของแหล่งที่มา</string>
     <string name="new_source">แหล่งที่มาใหม่</string>

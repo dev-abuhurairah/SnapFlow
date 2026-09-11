@@ -51,7 +51,7 @@
     <string name="embed_subs_summary">دمج الترجمات التي يوفرها الناشر مع ملف الفيديو</string>
     <string name="about">حول</string>
     <string name="link_copied_to_clipboard">تم نسخ الرابط إلى الحافظة</string>
-    <string name="request_permission_desc">يحتاج التطبيق إلى إذن \"التخزين\" لحفظ التنزيلات على الجهاز</string>
+    <string name="request_permission_desc">يحتاج التطبيق إلى إذن "التخزين" لحفظ التنزيلات على الجهاز</string>
     <string name="exit_app">الخروج من التطبيق</string>
     <string name="warning">تنبيه</string>
     <string name="sponsorblock_nonmusic">أجزاء غير موسيقية/خارج الموضوع</string>
@@ -177,7 +177,7 @@
     <string name="ignore_battery_optimization">تجاهل تحسين البطارية</string>
     <string name="log_downloads_summary">إنشاء ملف سجل للتنزيل المكتمل</string>
     <string name="shortcuts_desc">طريقة وصول أسرع للأوامر كثيرة الاستخدام</string>
-    <string name="restrict_filenames_summary">تقييد أسماء الملفات لتشمل أحرف ASCII فقط، وتجنب \"&amp;\" والمسافات في أسماء الملفات</string>
+    <string name="restrict_filenames_summary">تقييد أسماء الملفات لتشمل أحرف ASCII فقط، وتجنب "&amp;" والمسافات في أسماء الملفات</string>
     <string name="add_chapters_summary">تعليم أجزاء مقطع اليوتيوب و/أو حاجب شرائح الإعلانات كفصول للفيديو</string>
     <string name="container">الصيغة</string>
     <string name="cut">قص</string>
@@ -402,8 +402,8 @@
     <string name="label_visibility">إظهار التسمية</string>
     <string name="queue">جدول التنزيلات</string>
     <string name="reset">إعادة تعيين</string>
-    <string name="restore_info">انقر على \"استعادة نسخة احتياطية\" لدمج بيانات النسخة الاحتياطية مع البيانات الحالية إن وجدت.
-\nأو انقر على \"اعادة تعيين\" لاستعادة بيانات النسخة الاحتياطية مع إزالة البيانات الحالية إن وجدت.</string>
+    <string name="restore_info">انقر على "استعادة نسخة احتياطية" لدمج بيانات النسخة الاحتياطية مع البيانات الحالية إن وجدت.
+\nأو انقر على "اعادة تعيين" لاستعادة بيانات النسخة الاحتياطية مع إزالة البيانات الحالية إن وجدت.</string>
     <string name="use_alarm_manager">استخدام AlarmManager بدلًا من WorkManager للجدولة</string>
     <string name="use_alarm_manager_summary">يتعين تمكين هذا الخيار عندما تكون أداة الـ WorkManager مقيدًة من قبل مُصنِّع الجهاز أو إذا كانت المهام المجدولة ليست دقيقة جدًا</string>
     <string name="use_item_url_not_playlist">استخدام رابط العنصر بدلًا من رابط قائمة التشغيل</string>
@@ -478,7 +478,7 @@
     <string name="manual_po_token_generator">مولّد رمز Po Token اليدوي عبر الويب</string>
     <string name="reverse">اعكس</string>
     <string name="no_keep_subs">احذف ملفات الترجمة بعد التضمين</string>
-    <string name="no_keep_subs_summary">عند استخدام خياري \"تضمين الترجمات\" و\"اكتب الترجمات\" معًا، لا تحتفظ بملفات الترجمة بعد التضمين</string>
+    <string name="no_keep_subs_summary">عند استخدام خياري "تضمين الترجمات" و"اكتب الترجمات" معًا، لا تحتفظ بملفات الترجمة بعد التضمين</string>
     <string name="video_compatible">فيديو متوافق</string>
     <string name="video_compatible_summary">يعيد ترميز الفيديو لجعله متوافقًا مع التطبيقات الأخرى</string>
     <string name="no_free_space_warning">لا توجد مساحة خالية لهذا التضبيط.</string>

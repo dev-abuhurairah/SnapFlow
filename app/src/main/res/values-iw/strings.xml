@@ -118,7 +118,7 @@
     <string name="adjust_audio">התאמת שמע</string>
     <string name="new_template">תבנית חדשה</string>
     <string name="update_ytdl_nightly">גרסה לילית של yt-dlp</string>
-    <string name="command_download_notification_channel_description">התראה מראה את התקדמות ההורדה בשימוש ע\"י פקודת yt-dlp</string>
+    <string name="command_download_notification_channel_description">התראה מראה את התקדמות ההורדה בשימוש ע"י פקודת yt-dlp</string>
     <string name="aria2_summary">השתמש בשרת aria2c להורדה במקום שרת ברירת המחדל</string>
     <string name="enable_mtime">הפעל mtime</string>
     <string name="adjust_video">התאמת וידאו</string>
@@ -126,7 +126,7 @@
     <string name="save_thumb">שמירת תמונה ממוזערת</string>
     <string name="embed_thumb">תמונות ממוזערות</string>
     <string name="template">תבנית</string>
-    <string name="limit_rate_summary">מקסימום מהירות הורדה (בייטים לשנייה), למשל 50 ק\"ב או 4.2 מ\"ב</string>
+    <string name="limit_rate_summary">מקסימום מהירות הורדה (בייטים לשנייה), למשל 50 ק"ב או 4.2 מ"ב</string>
     <string name="limit_rate">הגבלת קצב</string>
     <string name="create_template">יצירת תבנית</string>
     <string name="enable_mtime_summary">הגדר את הכותרת HTTP Last-Modified כזמן השינוי האחרון</string>
@@ -151,7 +151,7 @@
     <string name="show_terminal">הצגת מסוף בתפריט השיתוף</string>
     <string name="crop_thumb_summary">חתוך את התמונה הממוזערת כעטיפה מרובעת להורדות אודיו</string>
     <string name="write_description">שמירת תיאור</string>
-    <string name="cache_first_summary">קובצי מטמון ירדו לזכרון הפנימי, ואח\"כ יעברו לתיקייה הנבחרת. השתמש באפשרות זו רק כשאינך יכול להוריד ישירות לזיכרון הפנימי</string>
+    <string name="cache_first_summary">קובצי מטמון ירדו לזכרון הפנימי, ואח"כ יעברו לתיקייה הנבחרת. השתמש באפשרות זו רק כשאינך יכול להוריד ישירות לזיכרון הפנימי</string>
     <string name="save_for_later">לשמור הורדה להמשך?</string>
     <string name="write_description_summary">כתוב תיאור קובץ</string>
     <string name="swipe_gestures_summary">החלק על פריטים לבצע פעולות שונות</string>
@@ -273,7 +273,7 @@
     <string name="download_rescheduled_to">הורד מתוזמנות מחדש ל:</string>
     <string name="keep_cache">לשמור את החלקים</string>
     <string name="file_size">גודל קובץ</string>
-    <string name="restrict_filenames_summary">הגבל את שמות הקבצים לתווי ASCII בלבד, והימנע מ-\"&amp;\" ורווחים בשמות הקבצים</string>
+    <string name="restrict_filenames_summary">הגבל את שמות הקבצים לתווי ASCII בלבד, והימנע מ-"&amp;" ורווחים בשמות הקבצים</string>
     <string name="configure_download">התאמת הורדה</string>
     <string name="sponsorblock">חוסם ספונסרים</string>
     <string name="video_recommendations">המלצות סרטונים</string>

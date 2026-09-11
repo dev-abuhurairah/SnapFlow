@@ -263,7 +263,7 @@
     <string name="keep_cache">Uchování fragmentů</string>
     <string name="preferred_audio_language">Preferovaný jazyk audia</string>
     <string name="file_size">Velikost souboru</string>
-    <string name="restrict_filenames_summary">Omezí názvy souborů pouze na znaky ASCII a vyhněte se znakům \"&amp;\" a mezerám v názvech souborů</string>
+    <string name="restrict_filenames_summary">Omezí názvy souborů pouze na znaky ASCII a vyhněte se znakům "&amp;" a mezerám v názvech souborů</string>
     <string name="auto">Auto</string>
     <string name="configure_download">Upravit stahování</string>
     <string name="shortcuts">Zkratky</string>
@@ -402,8 +402,8 @@
     <string name="queue">Fronta</string>
     <string name="reset">Resetovat</string>
     <string name="sync_with_source">Synchronizace se zdrojem</string>
-    <string name="restore_info">Stisknutím tlačítka \"Obnovit\" sloučíte uložená data s aktuálními daty.
-\nStisknutím tlačítka \"Resetovat\" vymažete a budete používat pouze uložená data v souboru.</string>
+    <string name="restore_info">Stisknutím tlačítka "Obnovit" sloučíte uložená data s aktuálními daty.
+\nStisknutím tlačítka "Resetovat" vymažete a budete používat pouze uložená data v souboru.</string>
     <string name="use_alarm_manager">Použití AlarmManager místo WorkManageru pro plánování</string>
     <string name="use_alarm_manager_summary">Funkci povolte, pokud je WorkManager omezen výrobcem zařízení nebo pokud naplánované úlohy nejsou příliš přesné</string>
     <string name="use_item_url_not_playlist">Použití URL položky místo URL playlistu</string>

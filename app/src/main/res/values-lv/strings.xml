@@ -130,7 +130,7 @@
     <string name="freespace">Brīva vieta</string>
     <string name="link_you_copied">Jūsu kopētā saite</string>
     <string name="restrict_filenames">Ierobežot Failu Nosaukumus</string>
-    <string name="restrict_filenames_summary">Failu nosaukumos drīkst izmantot tikai ASCII rakstzīmes un jāizvairās no \"&amp;\" un atstarpēm failu nosaukumos</string>
+    <string name="restrict_filenames_summary">Failu nosaukumos drīkst izmantot tikai ASCII rakstzīmes un jāizvairās no "&amp;" un atstarpēm failu nosaukumos</string>
     <string name="best_quality">Labākā Kvalitāte</string>
     <string name="home">Sākums</string>
     <string name="title">Nosaukums</string>

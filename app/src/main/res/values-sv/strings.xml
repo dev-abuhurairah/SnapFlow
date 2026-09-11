@@ -201,7 +201,7 @@
     <string name="downloads_running_try_later">Nerladdningen arbetar nu. Försök igen senare</string>
     <string name="ytdl_version">yt-dlp version</string>
     <string name="freespace">Ledigt utrymme</string>
-    <string name="restrict_filenames_summary">Begränsa filnamn till endast ASCII-tecken och undvik \"&amp;\" och mellanslag i filnamn</string>
+    <string name="restrict_filenames_summary">Begränsa filnamn till endast ASCII-tecken och undvik "&amp;" och mellanslag i filnamn</string>
     <string name="kill_app">Tvingq avsluta app</string>
     <string name="confirm_terminate">Stoppar alla nerladdningar och tvingar appen att avslutas</string>
     <string name="dont_ask_again">Fråga inte igen</string>
@@ -407,7 +407,7 @@
     <string name="sync_with_source">Synkronisera med källa</string>
     <string name="queue">Kö</string>
     <string name="reset">Återställ</string>
-    <string name="restore_info">Tryck på \"Återställa\" för att slå samman sparade data med dina aktuella data.\nTryck på \"Återställ\" för att radera och bara använda sparade data i filen.</string>
+    <string name="restore_info">Tryck på "Återställa" för att slå samman sparade data med dina aktuella data.\nTryck på "Återställ" för att radera och bara använda sparade data i filen.</string>
     <string name="playlist_as_album">Använd spellistnamn som albummetadata</string>
     <string name="continue_anyway">Fortsätt ändå</string>
     <string name="playlist_as_album_summary">Om albummetadata inte finns, använd spellistnamn i stället</string>

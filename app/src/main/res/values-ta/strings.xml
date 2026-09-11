@@ -108,7 +108,7 @@
     <string name="freespace">வெற்று இடம்</string>
     <string name="link_you_copied">நீங்கள் நகலெடுத்த இணைப்பு</string>
     <string name="restrict_filenames">கோப்பு பெயர்களைக் கட்டுப்படுத்து</string>
-    <string name="restrict_filenames_summary">கோப்புப் பெயர்களை ASCII எழுத்துகளுக்கு மட்டும் கட்டுப்படுத்தவும், மேலும் கோப்புப்பெயர்களில் \"&amp;\" மற்றும் இடைவெளிகளைத் தவிர்க்கவும்</string>
+    <string name="restrict_filenames_summary">கோப்புப் பெயர்களை ASCII எழுத்துகளுக்கு மட்டும் கட்டுப்படுத்தவும், மேலும் கோப்புப்பெயர்களில் "&amp;" மற்றும் இடைவெளிகளைத் தவிர்க்கவும்</string>
     <string name="kill_app">பயன்பாட்டை நிறுத்து</string>
     <string name="confirm_terminate">எல்லா பதிவிறக்கங்களையும் நிறுத்தி, பயன்பாட்டை வலுக்கட்டாயமாக மூடுகிறது</string>
     <string name="dont_ask_again">மீண்டும் கேட்காதே</string>

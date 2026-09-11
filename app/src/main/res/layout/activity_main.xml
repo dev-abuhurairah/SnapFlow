@@ -53,7 +53,7 @@
         android:background="#121212"
         app:itemIconTint="@color/snaptube_bottom_nav_color"
         app:itemTextColor="@color/snaptube_bottom_nav_color"
-        app:itemActiveIndicatorStyle="@style/Widget.Material3.BottomNavigationView.ActiveIndicator"
+        app:itemRippleColor="#33FFB800"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

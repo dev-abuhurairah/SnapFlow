@@ -195,7 +195,7 @@
     <string name="freespace">Free space</string>
     <string name="link_you_copied">Link you copied</string>
     <string name="restrict_filenames">Restrict filenames</string>
-    <string name="restrict_filenames_summary">Restrict filenames to only ASCII characters, and avoid \"&amp;\" and spaces in filenames</string>
+    <string name="restrict_filenames_summary">Restrict filenames to only ASCII characters, and avoid "&amp;" and spaces in filenames</string>
     <string name="kill_app">Terminate app</string>
     <string name="confirm_terminate">Stops all downloads and force closes the app</string>
     <string name="dont_ask_again">Don\'t ask again</string>

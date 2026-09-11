@@ -179,7 +179,7 @@
     <string name="share">Поделиться</string>
     <string name="confirm_delete_cookies_desc">Удалить все cookies навсегда</string>
     <string name="restrict_filenames">Ограничивать имена файлов</string>
-    <string name="restrict_filenames_summary">Ограничивать имена файлов только символами ASCII, избегать пробелов и символов \"&amp;\" в названиях файлов</string>
+    <string name="restrict_filenames_summary">Ограничивать имена файлов только символами ASCII, избегать пробелов и символов "&amp;" в названиях файлов</string>
     <string name="download_over_metered_networks">Загрузка через ограниченые сети</string>
     <string name="metered_network_download_start_info">Загрузка начнется при подключении к безлимитной сети</string>
     <string name="kill_app">Завершить приложение</string>

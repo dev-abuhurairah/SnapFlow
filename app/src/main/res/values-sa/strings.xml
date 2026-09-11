@@ -7,7 +7,7 @@
     <string name="best_quality">सर्वोत्तम गुणवत्ता</string>
     <string name="download_all">सर्वाणि डाउनलोड् कुर्वन्तु</string>
     <string name="settings">नियन्त्रण</string>
-    <string name="restrict_filenames_summary">गणकनामा केवल ASCII वर्णानां पर्यन्तं परिसीमय, च नामेषु \"&amp;\" च विश्रामं कुरुत।</string>
+    <string name="restrict_filenames_summary">गणकनामा केवल ASCII वर्णानां पर्यन्तं परिसीमय, च नामेषु "&amp;" च विश्रामं कुरुत।</string>
     <string name="disable_write_info_json">write info json अक्षम करें</string>
     <string name="concurrent_fragments">सामानां खण्डानां</string>
     <string name="embed_thumb">थम्बनेल आवृतयः</string>

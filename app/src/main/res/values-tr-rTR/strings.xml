@@ -175,7 +175,7 @@
     <string name="worst_quality">En düşük kalite</string>
     <string name="best_quality">En iyi kalite</string>
     <string name="restrict_filenames">Dosya adlarını kısıtla</string>
-    <string name="restrict_filenames_summary">Dosya adlarını yalnızca ASCII karakterleriyle kısıtla ve dosya adlarında \"&amp;\" ve boşluklardan kaçın</string>
+    <string name="restrict_filenames_summary">Dosya adlarını yalnızca ASCII karakterleriyle kısıtla ve dosya adlarında "&amp;" ve boşluklardan kaçın</string>
     <string name="kill_app">Uygulamayı sonlandır</string>
     <string name="confirm_terminate">Tüm indirmeleri durdurur ve uygulamayı kapatmaya zorlar</string>
     <string name="dont_ask_again">Tekrar sorma</string>

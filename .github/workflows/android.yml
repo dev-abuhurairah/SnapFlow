@@ -61,7 +61,7 @@ jobs:
 
       # Build ONLY the specific flavor assigned to this matrix runner
       - name: Build ${{ matrix.flavor }} APK release
-        run: ./gradlew ${{ matrix.task }} --warning-mode all
+        run: ./gradlew ${{ matrix.task }} --warning-mode all --stacktrace
 
       # Upload individual ABI artifacts for this runner's flavor
       - name: Upload arm64

@@ -269,7 +269,7 @@
     <string name="keep_cache">پارچەکان بهێڵەوە</string>
     <string name="preferred_audio_language">زمانی دەنگی پەسەندکراو</string>
     <string name="file_size">قەبارەی پەڕگە</string>
-    <string name="restrict_filenames_summary">ناوی پەڕگەکان سنووردار بکە کە تەنیا هێماکانی ئاسکی بەکاربهێنن، و خۆیان بەدوور بگرن لە بەکارهێنانی \"&amp;\" و بۆشایی لە ناوی پەڕگەکاندا</string>
+    <string name="restrict_filenames_summary">ناوی پەڕگەکان سنووردار بکە کە تەنیا هێماکانی ئاسکی بەکاربهێنن، و خۆیان بەدوور بگرن لە بەکارهێنانی "&amp;" و بۆشایی لە ناوی پەڕگەکاندا</string>
     <string name="auto">خۆکار</string>
     <string name="shortcuts">قەدبڕەکان</string>
     <string name="sponsorblock">سپۆنسەربلۆک</string>

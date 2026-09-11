@@ -364,7 +364,7 @@
     <string name="downloads_running_try_later">Работещо изтегляне. Опитайте отново по-късно</string>
     <string name="ytdl_version">Версия yt-dlp</string>
     <string name="restrict_filenames">Ограничени имена на файловете</string>
-    <string name="restrict_filenames_summary"><![CDATA[Ограничете имената на файлове само до ASCII знаци и избягвайте \"&\" и интервалите в имената на файловете]]></string>
+    <string name="restrict_filenames_summary"><![CDATA[Ограничете имената на файлове само до ASCII знаци и избягвайте "&" и интервалите в имената на файловете]]></string>
     <string name="delete_files_too">Изтрийте файловете от устройството</string>
     <string name="confirm_terminate">Спира всички изтегляния и принудително затваря приложението</string>
     <string name="create_shortcut">Създай пряк път</string>
@@ -437,7 +437,7 @@
     <string name="ytdlp_liked">yt-dlp Youtube Харесвани видеоклипове (необходими са бисквитки)</string>
     <string name="ytdlp_watch_history">yt-dlp Youtube История на гледане (необходими са бисквитки)</string>
     <string name="data_fetching_extra_command_summary">Разрешете командни шаблони, които да се използват за извличане на данни, като допълнителни команди</string>
-    <string name="ytdlp_watch_later">\"Гледайте по-късно\" в YouTube на yt-dlp (изисква бисквитки)</string>
+    <string name="ytdlp_watch_later">"Гледайте по-късно" в YouTube на yt-dlp (изисква бисквитки)</string>
     <string name="ytdlp_recommnedations">yt-dlp Youtube препоръки (необходими са бисквитки)</string>
     <string name="prefer_container_over_codec_audio_summary">Когато това е активирано, предпочитанието за аудио кодек ще бъде игнорирано и само контейнерът ще се промени</string>
     <string name="live_stream">Излъчване на живо</string>

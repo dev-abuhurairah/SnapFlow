@@ -172,7 +172,7 @@
     <string name="best_quality">Kualitas terbaik</string>
     <string name="worst_quality">Kualitas terburuk</string>
     <string name="restrict_filenames">Batasi nama berkas</string>
-    <string name="restrict_filenames_summary">Batasi nama berkas hanya pada karakter ASCII, dan hindari \"&amp;\" dan spasi dalam nama berkas</string>
+    <string name="restrict_filenames_summary">Batasi nama berkas hanya pada karakter ASCII, dan hindari "&amp;" dan spasi dalam nama berkas</string>
     <string name="kill_app">Hentikan aplikasi</string>
     <string name="confirm_terminate">Hentikan semua unduhan dan tutup paksa aplikasi</string>
     <string name="dont_ask_again">Jangan tanya lagi</string>

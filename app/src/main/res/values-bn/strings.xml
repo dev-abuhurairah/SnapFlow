@@ -172,7 +172,7 @@
     <string name="worst_quality">সবচেয়ে নিম্ন মানের</string>
     <string name="best_quality">সবচেয়ে ভালো মানের</string>
     <string name="restrict_filenames">ফাইল নাম সীমাবদ্ধ করুন</string>
-    <string name="restrict_filenames_summary">ফাইলের নামগুলিকে শুধুমাত্র ASCII অক্ষরের মধ্যে সীমাবদ্ধ করুন এবং ফাইলের নামগুলিতে \"&amp;\" এবং স্পেস এড়িয়ে চলুন</string>
+    <string name="restrict_filenames_summary">ফাইলের নামগুলিকে শুধুমাত্র ASCII অক্ষরের মধ্যে সীমাবদ্ধ করুন এবং ফাইলের নামগুলিতে "&amp;" এবং স্পেস এড়িয়ে চলুন</string>
     <string name="kill_app">অ্যাপ বন্ধ করুন</string>
     <string name="confirm_terminate">সমস্ত ডাউনলোড বন্ধ করা হবে এবং অ্যাপটি জোর করে বন্ধ করা হবে</string>
     <string name="dont_ask_again">আবার জিজ্ঞাসা করবেন না</string>

@@ -96,7 +96,7 @@
     <string name="download_rescheduled_to">Descărcarea a fost reprogramată la:</string>
     <string name="downloads_running_try_later">Lucrătorul de descărcare rulează. Încercați mai târziu</string>
     <string name="link_you_copied">Link pe care l-ai copiat</string>
-    <string name="restrict_filenames_summary">Limitați numele fișierelor doar la caractere ASCII și evitați \"&amp;” și spațiile în numele fișierelor</string>
+    <string name="restrict_filenames_summary">Limitați numele fișierelor doar la caractere ASCII și evitați "&amp;” și spațiile în numele fișierelor</string>
     <string name="cut">Tăiere</string>
     <string name="download_over_metered_networks">Descărcați prin rețele tarifate</string>
     <string name="save_subs_desc">Scrieți fișierul de subtitrare</string>

@@ -110,7 +110,7 @@
     <string name="cache_cleared">임시 파일 삭제됨</string>
     <string name="ytdl_version">yt-dlp 버전</string>
     <string name="freespace">여유 공간</string>
-    <string name="restrict_filenames_summary">파일 이름을 ASCII 문자로만 제한하고 파일 이름에 \"&amp;\" 및 공백을 사용하지 마십시오</string>
+    <string name="restrict_filenames_summary">파일 이름을 ASCII 문자로만 제한하고 파일 이름에 "&amp;" 및 공백을 사용하지 마십시오</string>
     <string name="kill_app">앱 종료</string>
     <string name="confirm_terminate">모든 다운로드를 중지하고 앱을 강제 종료합니다</string>
     <string name="dont_ask_again">다시 묻지 않음</string>

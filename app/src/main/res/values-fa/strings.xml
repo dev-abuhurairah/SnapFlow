@@ -157,7 +157,7 @@
     <string name="all_items_selected">تمام موارد انتخاب شد</string>
     <string name="clear_temporary_files_summary">حذف فایل‌های نهان از دانلودهای ازکارافتاده/خطاشده/لغوشده</string>
     <string name="restrict_filenames">محدود کردن نام فایل‌ها</string>
-    <string name="restrict_filenames_summary">نام فایل ها را فقط به کاراکترهای ASCII محدود کنید و از \"&amp;\" و فاصله در نام فایل ها خودداری کنید</string>
+    <string name="restrict_filenames_summary">نام فایل ها را فقط به کاراکترهای ASCII محدود کنید و از "&amp;" و فاصله در نام فایل ها خودداری کنید</string>
     <string name="kill_app">پایان دادن برنامه</string>
     <string name="start">راه اندازی</string>
     <string name="update_formats_summary">گرفتن فرمت‌ها به محض پدیدارشدن کارت‌های دانلود</string>

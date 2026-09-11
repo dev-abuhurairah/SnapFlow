@@ -28,15 +28,12 @@ android {
     namespace 'com.deniscerri.ytdl'
     compileSdk = 36
 
-    signingConfigs {
-        debug {
-            // Standard debug signing config built-in
-        }
-        release {
-            try {
-                def propertiesFile = rootProject.file("keystore.properties")
-                if (propertiesFile.exists() && propertiesFile.text.trim() != "") {
-                    properties.load(new FileInputStream(propertiesFile))
+    try {
+        def propertiesFile = rootProject.file("keystore.properties")
+        if (propertiesFile.exists() && propertiesFile.text.trim() != "") {
+            properties.load(new FileInputStream(propertiesFile))
+            signingConfigs {
+                debug {
                     def keyFile = file(properties["signingConfig.storeFile"])
                     if (keyFile.exists()) {
                         storeFile keyFile
@@ -45,9 +42,10 @@ android {
                         keyPassword properties["signingConfig.keyPassword"]
                     }
                 }
-            } catch (Exception ignored) {}
+            }
         }
-    }
+    } catch(Exception ignored){}
+
     defaultConfig {
         applicationId "com.devabuhurairah.snapflow"
         minSdk 24
@@ -78,7 +76,7 @@ android {
             shrinkResources false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             debuggable false
-            signingConfig (signingConfigs.release.storeFile != null && signingConfigs.release.storeFile.exists() ? signingConfigs.release : signingConfigs.debug)
+            signingConfig signingConfigs.debug
         }
 
         debug {

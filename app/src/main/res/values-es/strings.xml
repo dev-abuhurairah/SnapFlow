@@ -117,7 +117,7 @@
     <string name="select_format">Selecionar formato</string>
     <string name="remove_search_history">Borrar historial de búsqueda</string>
     <string name="enable_mtime">Habilitar mtime</string>
-    <string name="enable_mtime_summary">Coloca el encabezado \"HTTP Last-Modified\" como la hora de última modificación</string>
+    <string name="enable_mtime_summary">Coloca el encabezado "HTTP Last-Modified" como la hora de última modificación</string>
     <string name="log_downloads">Registros de descargas</string>
     <string name="log_downloads_summary">Crea un archivo de registro para cada descarga</string>
     <string name="download_queue">Cola de descargas</string>
@@ -172,7 +172,7 @@
     <string name="best_quality">Mejor calidad</string>
     <string name="worst_quality">Calidad más baja</string>
     <string name="restrict_filenames">Restringir nombres de archivos</string>
-    <string name="restrict_filenames_summary">Restringe los nombres de archivo a sólo caracteres ASCII. Evita \"&amp;\" y espacios en los nombres de archivo</string>
+    <string name="restrict_filenames_summary">Restringe los nombres de archivo a sólo caracteres ASCII. Evita "&amp;" y espacios en los nombres de archivo</string>
     <string name="kill_app">Terminar la aplicación</string>
     <string name="confirm_terminate">Detiene todas las descargas y fuerza el cierre de la aplicación</string>
     <string name="dont_ask_again">No preguntar de nuevo</string>
@@ -471,14 +471,14 @@
     <string name="grid">Tabla</string>
     <string name="use_format_sorting">Ordenar por importancia de formato</string>
     <string name="use_code_highlighter">Usar subrayador de código de colores</string>
-    <string name="write_subs_when_embed_subs_summary">Este ajuste aplicará \"Guardar Subtítulos\" y \"Guardar Subtítulos Automáticos\" para descargar los archivos de subtítulos y después los borrará tras insertarlos en el vídeo</string>
+    <string name="write_subs_when_embed_subs_summary">Este ajuste aplicará "Guardar Subtítulos" y "Guardar Subtítulos Automáticos" para descargar los archivos de subtítulos y después los borrará tras insertarlos en el vídeo</string>
     <string name="cut_unsupported">El recorte no está disponible para este elemento</string>
     <string name="select_between_desc">Especifica el rango de elementos a seleccionar</string>
     <string name="potoken">Token PO</string>
     <string name="manual_po_token_generator">Token PO del cliente web</string>
     <string name="reverse">Revertir</string>
     <string name="no_keep_subs">Borrar archivos de subtítulos tras insertarlos</string>
-    <string name="no_keep_subs_summary">Al usar tanto \"Integrar subtítulos\" como \"Escribir subtítulos\", no guardar los archivos de subtítulos tras insertarlos</string>
+    <string name="no_keep_subs_summary">Al usar tanto "Integrar subtítulos" como "Escribir subtítulos", no guardar los archivos de subtítulos tras insertarlos</string>
     <string name="video_compatible">Vídeo compatible</string>
     <string name="video_compatible_summary">Recodifica el vídeo, haciéndolo compatible con otras apps</string>
     <string name="no_free_space_warning">No hay espacio disponible para esta configuración.</string>

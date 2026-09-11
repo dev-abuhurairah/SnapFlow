@@ -210,7 +210,7 @@
     <string name="freespace">Prosti prostor</string>
     <string name="link_you_copied">Kopirana povezava</string>
     <string name="restrict_filenames">Omeji imena datotek</string>
-    <string name="restrict_filenames_summary">Imena datotek omejite samo na znake ASCII in se izogibajte znakom \"&amp;\" ter presledkom v imenih datotek</string>
+    <string name="restrict_filenames_summary">Imena datotek omejite samo na znake ASCII in se izogibajte znakom "&amp;" ter presledkom v imenih datotek</string>
     <string name="kill_app">Prekini aplikacijo</string>
     <string name="confirm_terminate">Ustavi vse prenose in prisilno zapri aplikacijo</string>
     <string name="dont_ask_again">Ne vprašaj ponovno</string>
