@@ -191,6 +191,22 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
                     searchBar?.performClick()
                 }
             }
+            view.findViewById<View>(R.id.snapflow_paste_clipboard_btn)?.setOnClickListener {
+                val clips = checkClipboard()
+                if (!clips.isNullOrEmpty() && clips.size == 1) {
+                    searchView?.setText(clips.first())
+                    initSearch(searchView!!)
+                } else {
+                    Toast.makeText(requireContext(), R.string.no_link_found, Toast.LENGTH_SHORT).show()
+                    searchBar?.performClick()
+                }
+            }
+            view.findViewById<View>(R.id.snapflow_dev_credit_btn)?.setOnClickListener {
+                try {
+                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/dev-abuhurairah"))
+                    startActivity(intent)
+                } catch (e: Exception) {}
+            }
         }
 
         homeAdapter =
@@ -1105,47 +1121,49 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
         val catMusic = view.findViewById<View>(R.id.snapflow_cat_music) ?: return
         val catMore = view.findViewById<View>(R.id.snapflow_cat_more) ?: return
 
-        fun updatePillVisuals(activeId: Int) {
-            val pills = listOf(
-                Triple(catSearch, R.id.snapflow_cat_search_icon, R.id.snapflow_cat_search_text),
-                Triple(catYoutube, R.id.snapflow_cat_youtube_icon, R.id.snapflow_cat_youtube_text),
-                Triple(catMusic, R.id.snapflow_cat_music_icon, R.id.snapflow_cat_music_text),
-                Triple(catMore, R.id.snapflow_cat_more_icon, R.id.snapflow_cat_more_text)
+        fun updateTabVisuals(activeId: Int) {
+            val tabs = listOf(
+                Pair(catSearch, Pair(R.id.snapflow_cat_search_text, R.id.snapflow_cat_search_underline)),
+                Pair(catYoutube, Pair(R.id.snapflow_cat_youtube_text, R.id.snapflow_cat_youtube_underline)),
+                Pair(catMusic, Pair(R.id.snapflow_cat_music_text, R.id.snapflow_cat_music_underline)),
+                Pair(catMore, Pair(R.id.snapflow_cat_more_text, R.id.snapflow_cat_more_underline))
             )
 
-            for ((container, iconId, textId) in pills) {
+            for ((container, pair) in tabs) {
                 val isActive = container.id == activeId
-                container.setBackgroundResource(
-                    if (isActive) R.drawable.snapflow_cat_pill_active
-                    else R.drawable.snapflow_cat_pill_inactive
-                )
-                val iconView = container.findViewById<android.widget.ImageView>(iconId)
-                val textView = container.findViewById<android.widget.TextView>(textId)
-                val color = if (isActive) Color.parseColor("#101014") else Color.parseColor("#A5A5B2")
-                iconView?.imageTintList = ColorStateList.valueOf(color)
-                textView?.setTextColor(color)
+                val textView = container.findViewById<android.widget.TextView>(pair.first)
+                val underline = container.findViewById<View>(pair.second)
+                if (isActive) {
+                    textView?.setTextColor(Color.WHITE)
+                    textView?.setTypeface(null, android.graphics.Typeface.BOLD)
+                    underline?.visibility = View.VISIBLE
+                } else {
+                    textView?.setTextColor(Color.parseColor("#8E8E98"))
+                    textView?.setTypeface(null, android.graphics.Typeface.NORMAL)
+                    underline?.visibility = View.INVISIBLE
+                }
             }
         }
 
         catSearch.setOnClickListener {
-            updatePillVisuals(R.id.snapflow_cat_search)
+            updateTabVisuals(R.id.snapflow_cat_search)
             scrollToTop()
         }
 
         catYoutube.setOnClickListener {
-            updatePillVisuals(R.id.snapflow_cat_youtube)
+            updateTabVisuals(R.id.snapflow_cat_youtube)
             sharedPreferences?.edit()?.putString("search_engine", "ytsearch")?.apply()
             searchBar?.performClick()
         }
 
         catMusic.setOnClickListener {
-            updatePillVisuals(R.id.snapflow_cat_music)
+            updateTabVisuals(R.id.snapflow_cat_music)
             sharedPreferences?.edit()?.putString("search_engine", "ytsearchmusic")?.apply()
             searchBar?.performClick()
         }
 
         catMore.setOnClickListener {
-            updatePillVisuals(R.id.snapflow_cat_more)
+            updateTabVisuals(R.id.snapflow_cat_more)
             searchBar?.performClick()
         }
     }

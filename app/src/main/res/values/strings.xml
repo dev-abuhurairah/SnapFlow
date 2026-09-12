@@ -19,6 +19,11 @@
     <string name="category_youtube">YouTube</string>
     <string name="category_music">Music</string>
     <string name="category_more">More</string>
+    <string name="vidsnap_title">VidSnap</string>
+    <string name="search_to_download">Search to download</string>
+    <string name="paste_link_from_clipboard">📋 Paste Link from Clipboard</string>
+    <string name="built_with_credit">⚡ Built with ❤️ by dev-abuhurairah</string>
+    <string name="no_link_found">No link found in clipboard</string>
     <string name="fast_format">Fast</string>
     <string name="classic_mp3">Classic MP3</string>
     <string name="worst_quality">Worst quality</string>

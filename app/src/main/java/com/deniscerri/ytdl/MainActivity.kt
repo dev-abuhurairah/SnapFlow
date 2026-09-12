@@ -19,6 +19,7 @@ import android.view.WindowInsets
 import android.view.inputmethod.InputMethodManager
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -668,24 +669,69 @@ class MainActivity : BaseActivity() {
         navView.post {
             runCatching {
                 val menuView = navView.getChildAt(0) as? ViewGroup ?: return@post
-                val size = (44 * navView.resources.displayMetrics.density).toInt()
+                val density = navView.resources.displayMetrics.density
+                val activeIconSize = (20 * density).toInt()
+                val unselectedIconSize = (24 * density).toInt()
+                val pillHeight = (40 * density).toInt()
+
                 for (i in 0 until menuView.childCount) {
                     val itemView = menuView.getChildAt(i) as? ViewGroup ?: continue
+                    val isSelected = itemView.isSelected
                     val iconContainer = itemView.findViewById<View>(com.google.android.material.R.id.navigation_bar_item_icon_container)
-                    iconContainer?.let { container ->
-                        container.layoutParams?.let { lp ->
-                            if (lp.width != size || lp.height != size) {
-                                lp.width = size
-                                lp.height = size
+                    val labelGroup = itemView.findViewById<View>(com.google.android.material.R.id.navigation_bar_item_labels_group)
+
+                    if (isSelected) {
+                        itemView.setBackgroundResource(R.drawable.snapflow_nav_pill_active)
+                        (itemView.layoutParams as? ViewGroup.MarginLayoutParams)?.let { lp ->
+                            lp.height = pillHeight
+                            lp.topMargin = ((navView.height - pillHeight) / 2).coerceAtLeast(0)
+                            itemView.layoutParams = lp
+                        }
+                        iconContainer?.let { container ->
+                            (container.layoutParams as? FrameLayout.LayoutParams)?.let { lp ->
+                                lp.gravity = Gravity.CENTER_VERTICAL or Gravity.START
+                                lp.marginStart = (14 * density).toInt()
+                                lp.width = activeIconSize
+                                lp.height = activeIconSize
                                 container.layoutParams = lp
                             }
-                        }
-                        val isSelected = itemView.isSelected
-                        if (!isSelected) {
-                            container.setBackgroundResource(R.drawable.snapflow_nav_circle_inactive)
-                        } else {
                             container.background = null
                         }
+                        labelGroup?.let { lg ->
+                            (lg.layoutParams as? FrameLayout.LayoutParams)?.let { lp ->
+                                lp.gravity = Gravity.CENTER_VERTICAL or Gravity.START
+                                lp.marginStart = (38 * density).toInt()
+                                lp.marginEnd = (14 * density).toInt()
+                                lg.layoutParams = lp
+                            }
+                            lg.visibility = View.VISIBLE
+                            if (lg is ViewGroup) {
+                                for (c in 0 until lg.childCount) {
+                                    (lg.getChildAt(c) as? TextView)?.apply {
+                                        typeface = android.graphics.Typeface.SERIF
+                                        setTextColor(ContextCompat.getColor(context, R.color.snapflow_accent_gold))
+                                    }
+                                }
+                            }
+                        }
+                    } else {
+                        itemView.background = null
+                        (itemView.layoutParams as? ViewGroup.MarginLayoutParams)?.let { lp ->
+                            lp.height = ViewGroup.LayoutParams.MATCH_PARENT
+                            lp.topMargin = 0
+                            itemView.layoutParams = lp
+                        }
+                        iconContainer?.let { container ->
+                            (container.layoutParams as? FrameLayout.LayoutParams)?.let { lp ->
+                                lp.gravity = Gravity.CENTER
+                                lp.marginStart = 0
+                                lp.width = unselectedIconSize
+                                lp.height = unselectedIconSize
+                                container.layoutParams = lp
+                            }
+                            container.background = null
+                        }
+                        labelGroup?.visibility = View.GONE
                     }
                 }
             }

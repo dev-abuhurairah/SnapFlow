@@ -34,13 +34,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/incognito_header" />
 
-    <!-- Ambient Dark Wave & Warm Golden Backlight Glow behind bottom nav -->
+    <!-- Ambient Glow hidden to match clean reference screenshot -->
     <ImageView
         android:id="@+id/bottom_ambient_glow"
         android:layout_width="match_parent"
         android:layout_height="160dp"
         android:src="@drawable/snapflow_bottom_ambient_glow"
         android:scaleType="fitXY"
+        android:visibility="gone"
         android:importantForAccessibility="no"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -62,16 +63,16 @@
         android:id="@+id/bottomNavigationView"
         style="@style/SnapFlow.BottomNav"
         android:layout_width="0dp"
-        android:layout_height="70dp"
+        android:layout_height="62dp"
         android:layout_marginHorizontal="28dp"
-        android:layout_marginBottom="18dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintWidth_max="340dp"
         android:background="@drawable/snapflow_floating_nav_bg"
         android:elevation="14dp"
         app:itemIconTint="@color/snapflow_bottom_nav_icon_color"
         app:itemTextColor="@color/snapflow_bottom_nav_text_color"
         app:itemRippleColor="@color/snapflow_accent_gold_glow"
-        app:labelVisibilityMode="labeled"
+        app:labelVisibilityMode="selected"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -132,146 +132,131 @@
         android:layout_height="wrap_content">
 
         <!-- Top Category Navigation Pills (Matches Reference Screenshot) -->
+        <!-- Category Navigation Tabs (Matches Reference Screenshot) -->
         <LinearLayout
             android:id="@+id/snapflow_category_container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:orientation="horizontal"
-            android:paddingHorizontal="14dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="6dp">
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="14dp"
+            android:paddingBottom="8dp">
 
             <!-- 1. Search (Active by default) -->
             <LinearLayout
                 android:id="@+id/snapflow_cat_search"
                 android:layout_width="0dp"
-                android:layout_height="38dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginHorizontal="3dp"
-                android:background="@drawable/snapflow_cat_pill_active"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="6dp">
-
-                <ImageView
-                    android:id="@+id/snapflow_cat_search_icon"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/ic_snapflow_tab_search"
-                    app:tint="#101014" />
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/snapflow_cat_search_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
                     android:text="@string/category_search"
-                    android:textColor="#101014"
-                    android:textSize="12sp"
-                    android:fontFamily="sans-serif-bold"
-                    android:singleLine="true" />
+                    android:textColor="#FFFFFF"
+                    android:textSize="17sp"
+                    android:fontFamily="serif"
+                    android:textStyle="bold" />
+
+                <View
+                    android:id="@+id/snapflow_cat_search_underline"
+                    android:layout_width="38dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/snapflow_tab_underline" />
             </LinearLayout>
 
             <!-- 2. YouTube -->
             <LinearLayout
                 android:id="@+id/snapflow_cat_youtube"
                 android:layout_width="0dp"
-                android:layout_height="38dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginHorizontal="3dp"
-                android:background="@drawable/snapflow_cat_pill_inactive"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="6dp">
-
-                <ImageView
-                    android:id="@+id/snapflow_cat_youtube_icon"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/ic_snapflow_tab_youtube"
-                    app:tint="#A5A5B2" />
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/snapflow_cat_youtube_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
                     android:text="@string/category_youtube"
-                    android:textColor="#A5A5B2"
-                    android:textSize="12sp"
-                    android:fontFamily="sans-serif-medium"
-                    android:singleLine="true" />
+                    android:textColor="#8E8E98"
+                    android:textSize="17sp"
+                    android:fontFamily="serif" />
+
+                <View
+                    android:id="@+id/snapflow_cat_youtube_underline"
+                    android:layout_width="38dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/snapflow_tab_underline" />
             </LinearLayout>
 
             <!-- 3. Music -->
             <LinearLayout
                 android:id="@+id/snapflow_cat_music"
                 android:layout_width="0dp"
-                android:layout_height="38dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginHorizontal="3dp"
-                android:background="@drawable/snapflow_cat_pill_inactive"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="6dp">
-
-                <ImageView
-                    android:id="@+id/snapflow_cat_music_icon"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/ic_snapflow_tab_music"
-                    app:tint="#A5A5B2" />
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/snapflow_cat_music_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
                     android:text="@string/category_music"
-                    android:textColor="#A5A5B2"
-                    android:textSize="12sp"
-                    android:fontFamily="sans-serif-medium"
-                    android:singleLine="true" />
+                    android:textColor="#8E8E98"
+                    android:textSize="17sp"
+                    android:fontFamily="serif" />
+
+                <View
+                    android:id="@+id/snapflow_cat_music_underline"
+                    android:layout_width="38dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/snapflow_tab_underline" />
             </LinearLayout>
 
             <!-- 4. More -->
             <LinearLayout
                 android:id="@+id/snapflow_cat_more"
                 android:layout_width="0dp"
-                android:layout_height="38dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_marginHorizontal="3dp"
-                android:background="@drawable/snapflow_cat_pill_inactive"
                 android:clickable="true"
                 android:focusable="true"
                 android:gravity="center"
-                android:orientation="horizontal"
-                android:paddingHorizontal="6dp">
-
-                <ImageView
-                    android:id="@+id/snapflow_cat_more_icon"
-                    android:layout_width="15dp"
-                    android:layout_height="15dp"
-                    android:src="@drawable/ic_snapflow_tab_more"
-                    app:tint="#A5A5B2" />
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/snapflow_cat_more_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="5dp"
                     android:text="@string/category_more"
-                    android:textColor="#A5A5B2"
-                    android:textSize="12sp"
-                    android:fontFamily="sans-serif-medium"
-                    android:singleLine="true" />
+                    android:textColor="#8E8E98"
+                    android:textSize="17sp"
+                    android:fontFamily="serif" />
+
+                <View
+                    android:id="@+id/snapflow_cat_more_underline"
+                    android:layout_width="38dp"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:visibility="invisible"
+                    android:background="@drawable/snapflow_tab_underline" />
             </LinearLayout>
 
         </LinearLayout>
@@ -290,129 +275,278 @@
             app:title="@string/app_name"
             android:layout_height="wrap_content" />
 
-        <!-- SnapFlow Hero Branding Section (Matches Reference Screenshot) -->
-        <LinearLayout
+        <!-- VidSnap Hero & Backdrop Section (Matches Reference Screenshot) -->
+        <FrameLayout
             android:id="@+id/snaptube_hero_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:paddingTop="52dp"
-            android:paddingBottom="28dp">
+            android:layout_marginTop="6dp">
 
-            <!-- Stylized Golden Lightning 'S' Emblem -->
-            <ImageView
-                android:id="@+id/snapflow_hero_logo"
-                android:layout_width="56dp"
-                android:layout_height="56dp"
-                android:src="@drawable/ic_snapflow_brand_logo"
-                android:layout_marginBottom="14dp"
-                android:importantForAccessibility="no" />
+            <!-- Social Media Badges Collage Backdrop (Placed behind foreground) -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:importantForAccessibility="no">
 
-            <!-- Dual-tone Typography: Snap (White) + Flow (Gold) -->
+                <!-- 1. Top-left Facebook blue tile with 'f' -->
+                <FrameLayout
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="-10dp"
+                    android:layout_marginTop="16dp"
+                    android:rotation="-12"
+                    android:background="@drawable/snapflow_tile_fb">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="f"
+                        android:textColor="#FFFFFF"
+                        android:textSize="38sp"
+                        android:fontFamily="sans-serif-bold" />
+                </FrameLayout>
+
+                <!-- 2. Top-center Green tile -->
+                <View
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="82dp"
+                    android:layout_marginTop="4dp"
+                    android:rotation="6"
+                    android:background="@drawable/snapflow_tile_green" />
+
+                <!-- 3. Top-right Facebook blue tile with 'f' -->
+                <FrameLayout
+                    android:layout_width="68dp"
+                    android:layout_height="68dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginTop="20dp"
+                    android:rotation="10"
+                    android:background="@drawable/snapflow_tile_fb">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="f"
+                        android:textColor="#FFFFFF"
+                        android:textSize="40sp"
+                        android:fontFamily="sans-serif-bold" />
+                </FrameLayout>
+
+                <!-- 4. Mid-left Magenta/Instagram tile -->
+                <View
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_marginStart="92dp"
+                    android:layout_marginTop="85dp"
+                    android:rotation="-6"
+                    android:background="@drawable/snapflow_tile_insta" />
+
+                <!-- 5. Lower-left Red tile -->
+                <View
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="96dp"
+                    android:rotation="-14"
+                    android:background="@drawable/snapflow_tile_yt" />
+
+                <!-- 6. Mid-right YouTube Red tile with white play icon -->
+                <FrameLayout
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="80dp"
+                    android:layout_marginTop="125dp"
+                    android:rotation="-5"
+                    android:background="@drawable/snapflow_tile_yt">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_snapflow_play_arrow"
+                        app:tint="#FFFFFF"
+                        android:importantForAccessibility="no" />
+                </FrameLayout>
+
+                <!-- 7. Far-right Red Share tile -->
+                <FrameLayout
+                    android:layout_width="66dp"
+                    android:layout_height="66dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="-12dp"
+                    android:layout_marginTop="115dp"
+                    android:rotation="12"
+                    android:background="@drawable/snapflow_tile_share">
+
+                    <ImageView
+                        android:layout_width="26dp"
+                        android:layout_height="26dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_snapflow_tile_share"
+                        app:tint="#FFFFFF"
+                        android:importantForAccessibility="no" />
+                </FrameLayout>
+
+                <!-- 8. Bottom-left Teal music tile -->
+                <FrameLayout
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="62dp"
+                    android:layout_marginTop="160dp"
+                    android:rotation="14"
+                    android:background="@drawable/snapflow_tile_teal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_snapflow_tile_music"
+                        app:tint="#80FFFFFF"
+                        android:importantForAccessibility="no" />
+                </FrameLayout>
+
+            </RelativeLayout>
+
+            <!-- Foreground Content: VidSnap Title, Capsule Search Bar, and Action Pills -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="26dp"
+                android:paddingBottom="24dp">
 
+                <!-- VidSnap Hero Title in Golden Serif -->
                 <TextView
                     android:id="@+id/snaptube_hero_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Snap"
-                    android:textColor="#FFFFFF"
-                    android:textSize="36sp"
+                    android:text="@string/vidsnap_title"
+                    android:textColor="#FFCC00"
+                    android:textSize="44sp"
                     android:textStyle="bold"
-                    android:fontFamily="sans-serif-black"
-                    android:letterSpacing="-0.02" />
+                    android:fontFamily="serif"
+                    android:layout_marginBottom="24dp" />
 
-                <TextView
+                <!-- Capsule Search Bar with Left Download Arrow and Right Yellow Circular Search Button -->
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_height="wrap_content">
+
+                    <com.facebook.shimmer.ShimmerFrameLayout
+                        android:id="@+id/progress"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:translationZ="250dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/search_bar"
+                        app:layout_constraintEnd_toEndOf="@+id/search_bar"
+                        app:layout_constraintStart_toStartOf="@+id/search_bar"
+                        app:layout_constraintTop_toTopOf="@+id/search_bar"
+                        app:shimmer_auto_start="true">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:cardCornerRadius="30dp" />
+
+                    </com.facebook.shimmer.ShimmerFrameLayout>
+
+                    <com.google.android.material.search.SearchBar
+                        android:id="@+id/search_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="56dp"
+                        android:paddingEnd="54dp"
+                        android:background="@drawable/snapflow_search_pill_bg"
+                        android:elevation="0dp"
+                        app:navigationIcon="@drawable/ic_snapflow_nav_download"
+                        app:navigationIconTint="#8E8E98"
+                        android:hint="@string/search_to_download"
+                        android:textColorHint="#7E7E8E"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Circular Yellow Search Button -->
+                    <ImageView
+                        android:id="@+id/snaptube_search_circle_btn"
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:layout_marginEnd="6dp"
+                        android:background="@drawable/snapflow_yellow_circle_btn"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_snapflow_search_black"
+                        android:elevation="4dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:contentDescription="@string/search"
+                        app:layout_constraintBottom_toBottomOf="@+id/search_bar"
+                        app:layout_constraintEnd_toEndOf="@+id/search_bar"
+                        app:layout_constraintTop_toTopOf="@+id/search_bar" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <!-- Paste Link from Clipboard Pill Button -->
+                <LinearLayout
+                    android:id="@+id/snapflow_paste_clipboard_btn"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Flow"
-                    android:textColor="@color/snapflow_accent_gold"
-                    android:textSize="36sp"
-                    android:textStyle="bold"
-                    android:fontFamily="sans-serif-black"
-                    android:letterSpacing="-0.02" />
+                    android:layout_height="44dp"
+                    android:layout_marginTop="18dp"
+                    android:background="@drawable/snapflow_paste_pill_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="24dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/paste_link_from_clipboard"
+                        android:textColor="#FFCC00"
+                        android:textSize="14sp"
+                        android:fontFamily="serif" />
+                </LinearLayout>
+
+                <!-- Dev Credit Pill: ⚡ Built with ❤️ by dev-abuhurairah -->
+                <LinearLayout
+                    android:id="@+id/snapflow_dev_credit_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/snapflow_credit_pill_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/built_with_credit"
+                        android:textColor="#FFCC00"
+                        android:textSize="11.5sp"
+                        android:fontFamily="serif" />
+                </LinearLayout>
+
             </LinearLayout>
 
-            <!-- Spaced Tagline: FAST • SIMPLE • DOWNLOAD -->
-            <TextView
-                android:id="@+id/snaptube_hero_tagline"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/snapflow_tagline"
-                android:textColor="@color/snapflow_text_secondary"
-                android:textSize="11sp"
-                android:fontFamily="sans-serif-medium"
-                android:letterSpacing="0.25" />
-        </LinearLayout>
-
-        <!-- Primary Capsule Search / Download Bar (Matches Reference Screenshot) -->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_marginHorizontal="20dp"
-            android:layout_marginBottom="28dp"
-            app:layout_scrollFlags="scroll|enterAlways"
-            android:layout_height="wrap_content">
-
-            <com.facebook.shimmer.ShimmerFrameLayout
-                android:id="@+id/progress"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:translationZ="250dp"
-                android:visibility="gone"
-                app:layout_constraintBottom_toBottomOf="@+id/search_bar"
-                app:layout_constraintEnd_toEndOf="@+id/search_bar"
-                app:layout_constraintStart_toStartOf="@+id/search_bar"
-                app:layout_constraintTop_toTopOf="@+id/search_bar"
-                app:shimmer_auto_start="true">
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:cardCornerRadius="30dp" />
-
-            </com.facebook.shimmer.ShimmerFrameLayout>
-
-            <com.google.android.material.search.SearchBar
-                android:id="@+id/search_bar"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:paddingEnd="52dp"
-                android:background="@drawable/snapflow_search_pill_bg"
-                android:elevation="0dp"
-                app:navigationIcon="@drawable/ic_snapflow_link"
-                app:navigationIconTint="#7E7E8C"
-                android:hint="@string/paste_link_or_search"
-                android:textColorHint="@color/snapflow_text_secondary"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-            <!-- Circular Yellow Download Button matching Screenshot -->
-            <ImageView
-                android:id="@+id/snaptube_search_circle_btn"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
-                android:layout_marginEnd="7dp"
-                android:background="@drawable/snapflow_yellow_circle_btn"
-                android:padding="10dp"
-                android:src="@drawable/ic_snapflow_arrow_down"
-                app:tint="#101014"
-                android:elevation="4dp"
-                android:clickable="true"
-                android:focusable="true"
-                android:contentDescription="@string/tab_download"
-                app:layout_constraintBottom_toBottomOf="@+id/search_bar"
-                app:layout_constraintEnd_toEndOf="@+id/search_bar"
-                app:layout_constraintTop_toTopOf="@+id/search_bar" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
 
         <!-- Platform Quick Access Shortcuts Grid (Hidden to match Screenshot 1) -->
         <LinearLayout
