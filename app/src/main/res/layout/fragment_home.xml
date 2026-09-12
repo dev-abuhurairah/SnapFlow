@@ -282,23 +282,30 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp">
 
-            <!-- Social Media Badges Collage Backdrop (Placed behind foreground) -->
+            <!-- Social Media Badges Collage Backdrop (Artistic harmonious cluster behind SnapFlow) -->
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="300dp"
+                android:layout_height="170dp"
                 android:clipChildren="false"
                 android:clipToPadding="false"
                 android:importantForAccessibility="no">
 
-                <!-- 1. Top-left Facebook blue tile with 'f' -->
+                <!-- Ambient Radial Glow -->
+                <View
+                    android:layout_width="180dp"
+                    android:layout_height="150dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/snapflow_hero_glow" />
+
+                <!-- 1. Top-left Facebook Royal Blue Tile -->
                 <FrameLayout
-                    android:layout_width="66dp"
-                    android:layout_height="66dp"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="-10dp"
-                    android:layout_marginTop="16dp"
-                    android:rotation="-12"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="8dp"
+                    android:rotation="-10"
                     android:background="@drawable/snapflow_tile_fb">
 
                     <TextView
@@ -307,119 +314,89 @@
                         android:layout_gravity="center"
                         android:text="f"
                         android:textColor="#FFFFFF"
-                        android:textSize="38sp"
+                        android:textSize="32sp"
                         android:fontFamily="sans-serif-bold" />
                 </FrameLayout>
 
-                <!-- 2. Top-center Green tile -->
-                <View
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
+                <!-- 2. Top-center Emerald Green WhatsApp Tile -->
+                <FrameLayout
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
                     android:layout_alignParentTop="true"
-                    android:layout_marginStart="82dp"
+                    android:layout_marginStart="106dp"
                     android:layout_marginTop="4dp"
-                    android:rotation="6"
-                    android:background="@drawable/snapflow_tile_green" />
-
-                <!-- 3. Top-right Facebook blue tile with 'f' -->
-                <FrameLayout
-                    android:layout_width="68dp"
-                    android:layout_height="68dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginEnd="16dp"
-                    android:layout_marginTop="20dp"
-                    android:rotation="10"
-                    android:background="@drawable/snapflow_tile_fb">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="f"
-                        android:textColor="#FFFFFF"
-                        android:textSize="40sp"
-                        android:fontFamily="sans-serif-bold" />
-                </FrameLayout>
-
-                <!-- 4. Mid-left Magenta/Instagram tile -->
-                <View
-                    android:layout_width="66dp"
-                    android:layout_height="66dp"
-                    android:layout_marginStart="92dp"
-                    android:layout_marginTop="85dp"
-                    android:rotation="-6"
-                    android:background="@drawable/snapflow_tile_insta" />
-
-                <!-- 5. Lower-left Red tile -->
-                <View
-                    android:layout_width="66dp"
-                    android:layout_height="66dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginStart="14dp"
-                    android:layout_marginTop="96dp"
-                    android:rotation="-14"
-                    android:background="@drawable/snapflow_tile_yt" />
-
-                <!-- 6. Mid-right YouTube Red tile with white play icon -->
-                <FrameLayout
-                    android:layout_width="72dp"
-                    android:layout_height="72dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="80dp"
-                    android:layout_marginTop="125dp"
-                    android:rotation="-5"
-                    android:background="@drawable/snapflow_tile_yt">
+                    android:rotation="5"
+                    android:background="@drawable/snapflow_tile_green">
 
                     <ImageView
                         android:layout_width="22dp"
                         android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_snapflow_tile_chat"
+                        app:tint="#FFFFFF"
+                        android:importantForAccessibility="no" />
+                </FrameLayout>
+
+                <!-- 3. Top-right Crimson YouTube Tile -->
+                <FrameLayout
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginTop="8dp"
+                    android:rotation="9"
+                    android:background="@drawable/snapflow_tile_yt">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_snapflow_play_arrow"
                         app:tint="#FFFFFF"
                         android:importantForAccessibility="no" />
                 </FrameLayout>
 
-                <!-- 7. Far-right Red Share tile -->
+                <!-- 4. Mid-left Radiant Instagram Gradient Tile -->
                 <FrameLayout
-                    android:layout_width="66dp"
-                    android:layout_height="66dp"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="64dp"
+                    android:rotation="-6"
+                    android:background="@drawable/snapflow_tile_insta">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_snapflow_tile_camera"
+                        app:tint="#FFFFFF"
+                        android:importantForAccessibility="no" />
+                </FrameLayout>
+
+                <!-- 5. Mid-right Coral Share Tile -->
+                <FrameLayout
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
                     android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="-12dp"
-                    android:layout_marginTop="115dp"
-                    android:rotation="12"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginTop="64dp"
+                    android:rotation="7"
                     android:background="@drawable/snapflow_tile_share">
 
                     <ImageView
-                        android:layout_width="26dp"
-                        android:layout_height="26dp"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
                         android:layout_gravity="center"
                         android:src="@drawable/ic_snapflow_tile_share"
                         app:tint="#FFFFFF"
                         android:importantForAccessibility="no" />
                 </FrameLayout>
 
-                <!-- 8. Bottom-left Teal music tile -->
-                <FrameLayout
-                    android:layout_width="54dp"
-                    android:layout_height="54dp"
-                    android:layout_marginStart="62dp"
-                    android:layout_marginTop="160dp"
-                    android:rotation="14"
-                    android:background="@drawable/snapflow_tile_teal">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_snapflow_tile_music"
-                        app:tint="#80FFFFFF"
-                        android:importantForAccessibility="no" />
-                </FrameLayout>
-
             </RelativeLayout>
 
-            <!-- Foreground Content: VidSnap Title, Capsule Search Bar, and Action Pills -->
+            <!-- Foreground Content: SnapFlow Title, Capsule Search Bar, and Action Pills -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -428,22 +405,25 @@
                 android:paddingTop="26dp"
                 android:paddingBottom="24dp">
 
-                <!-- VidSnap Hero Title in Golden Serif -->
+                <!-- SnapFlow Hero Title in Golden Serif -->
                 <TextView
                     android:id="@+id/snaptube_hero_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/vidsnap_title"
+                    android:text="@string/snapflow_brand_title"
                     android:textColor="#FFCC00"
                     android:textSize="44sp"
                     android:textStyle="bold"
                     android:fontFamily="serif"
+                    android:letterSpacing="0.02"
                     android:layout_marginBottom="24dp" />
 
                 <!-- Capsule Search Bar with Left Download Arrow and Right Yellow Circular Search Button -->
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
                     android:layout_marginHorizontal="20dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
                     android:layout_height="wrap_content">
 
                     <com.facebook.shimmer.ShimmerFrameLayout
@@ -469,9 +449,11 @@
                         android:id="@+id/search_bar"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
-                        android:paddingEnd="54dp"
+                        android:paddingEnd="58dp"
                         android:background="@drawable/snapflow_search_pill_bg"
                         android:elevation="0dp"
+                        app:elevation="0dp"
+                        android:stateListAnimator="@null"
                         app:navigationIcon="@drawable/ic_snapflow_nav_download"
                         app:navigationIconTint="#8E8E98"
                         android:hint="@string/search_to_download"
@@ -488,9 +470,11 @@
                         android:layout_height="44dp"
                         android:layout_marginEnd="6dp"
                         android:background="@drawable/snapflow_yellow_circle_btn"
-                        android:padding="12dp"
+                        android:padding="11dp"
                         android:src="@drawable/ic_snapflow_search_black"
-                        android:elevation="4dp"
+                        android:elevation="14dp"
+                        android:translationZ="14dp"
+                        android:stateListAnimator="@null"
                         android:clickable="true"
                         android:focusable="true"
                         android:contentDescription="@string/search"

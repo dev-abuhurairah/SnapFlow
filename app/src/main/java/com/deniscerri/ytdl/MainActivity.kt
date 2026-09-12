@@ -5,9 +5,12 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Build
+import android.widget.ImageView
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -153,18 +156,18 @@ class MainActivity : BaseActivity() {
             navigationBarView = findViewById(R.id.bottomNavigationView)
         }
 
-        navigationBarView?.apply {
-            window.decorView.setOnApplyWindowInsetsListener { view: View, windowInsets: WindowInsets? ->
-                val windowInsetsCompat = WindowInsetsCompat.toWindowInsetsCompat(
-                    windowInsets!!, view
-                )
-                val isImeVisible = windowInsetsCompat.isVisible(WindowInsetsCompat.Type.ime())
-                visibility = if (isImeVisible) View.GONE else View.VISIBLE
-                view.onApplyWindowInsets(windowInsets)
-            }
+        window.decorView.setOnApplyWindowInsetsListener { view: View, windowInsets: WindowInsets? ->
+            val windowInsetsCompat = WindowInsetsCompat.toWindowInsetsCompat(
+                windowInsets!!, view
+            )
+            val isImeVisible = windowInsetsCompat.isVisible(WindowInsetsCompat.Type.ime())
+            findViewById<View>(R.id.snapflow_custom_bottom_nav)?.visibility = if (isImeVisible) View.GONE else View.VISIBLE
+            navigationBarView?.visibility = View.GONE
+            view.onApplyWindowInsets(windowInsets)
         }
 
         NavbarUtil.init(this)
+        setupCustomBottomNavigation()
 
         navigationBarView?.apply {
             if (savedInstanceState == null){
@@ -328,15 +331,14 @@ class MainActivity : BaseActivity() {
 
 
     fun hideBottomNavigation(){
+        findViewById<View>(R.id.snapflow_custom_bottom_nav)?.apply {
+            animate()?.translationY(this.height.toFloat() + 40f)?.setDuration(250)?.withEndAction {
+                this.visibility = View.GONE
+            }?.start()
+        }
         navigationBarView?.apply {
             if (this is BottomNavigationView){
-                this@MainActivity.findViewById<FragmentContainerView>(R.id.frame_layout).updateLayoutParams<ConstraintLayout.LayoutParams> {
-                    bottomToTop = ConstraintLayout.LayoutParams.UNSET
-                    bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID
-                }
-                this.animate()?.translationY(this.height.toFloat())?.setDuration(300)?.withEndAction {
-                    this.visibility = View.GONE
-                }?.start()
+                this.visibility = View.GONE
             }else if (this is NavigationRailView){
                 this@MainActivity.findViewById<FragmentContainerView>(R.id.frame_layout).updateLayoutParams {
                     this.width = LayoutParams.MATCH_PARENT
@@ -353,20 +355,16 @@ class MainActivity : BaseActivity() {
                 }
             }
         }
-
-
     }
 
     fun showBottomNavigation(){
+        findViewById<View>(R.id.snapflow_custom_bottom_nav)?.apply {
+            this.visibility = View.VISIBLE
+            animate()?.translationY(0F)?.setDuration(250)?.start()
+        }
         navigationBarView?.apply {
             if (this is BottomNavigationView){
-                this@MainActivity.findViewById<FragmentContainerView>(R.id.frame_layout).updateLayoutParams<ConstraintLayout.LayoutParams> {
-                    bottomToTop = R.id.bottomNavigationView
-                    bottomToBottom = ConstraintLayout.LayoutParams.UNSET
-                }
-                this.animate()?.translationY(0F)?.setDuration(300)?.withEndAction {
-                    this.visibility = View.VISIBLE
-                }?.start()
+                this.visibility = View.GONE
             }else if (this is NavigationRailView){
                 this@MainActivity.findViewById<FragmentContainerView>(R.id.frame_layout).updateLayoutParams {
                     this.width = 0
@@ -625,7 +623,7 @@ class MainActivity : BaseActivity() {
                                     RuntimeManager.reInit(this@MainActivity)
                                 }.onFailure { f ->
                                     Snackbar.make(findViewById(R.id.frame_layout), f.message ?: "", Snackbar.LENGTH_LONG).apply {
-                                        anchorView = navigationBarView
+                                        anchorView = findViewById(R.id.snapflow_custom_bottom_nav) ?: navigationBarView
                                         show()
                                     }
                                 }
@@ -643,7 +641,7 @@ class MainActivity : BaseActivity() {
 
                     if (firstRun) {
                         Snackbar.make(findViewById(R.id.frame_layout), context.getString(R.string.ytdl_updating_started), Snackbar.LENGTH_LONG).apply {
-                            anchorView = navigationBarView
+                            anchorView = findViewById(R.id.snapflow_custom_bottom_nav) ?: navigationBarView
                             show()
                         }
                     }
@@ -656,7 +654,7 @@ class MainActivity : BaseActivity() {
                         val version = RuntimeManager.getInstance().version(context)
                         val message = this@MainActivity.getString(R.string.ytld_update_success) + " [${version}]"
                         Snackbar.make(findViewById(R.id.frame_layout), message, Snackbar.LENGTH_LONG).apply {
-                            anchorView = navigationBarView
+                            anchorView = findViewById(R.id.snapflow_custom_bottom_nav) ?: navigationBarView
                             show()
                         }
                     }
@@ -665,23 +663,80 @@ class MainActivity : BaseActivity() {
         }
     }
 
-    private fun styleBottomNavItems(navView: BottomNavigationView) {
-        navView.post {
-            runCatching {
-                val menuView = navView.getChildAt(0) as? ViewGroup ?: return@post
-                for (i in 0 until menuView.childCount) {
-                    val itemView = menuView.getChildAt(i) as? ViewGroup ?: continue
-                    val isSelected = itemView.isSelected
-                    if (isSelected) {
-                        itemView.setBackgroundResource(R.drawable.snapflow_nav_pill_active)
-                    } else {
-                        itemView.background = null
-                    }
-                    val iconContainer = itemView.findViewById<View>(com.google.android.material.R.id.navigation_bar_item_icon_container)
-                    iconContainer?.background = null
+    private fun setupCustomBottomNavigation() {
+        val customNav = findViewById<View>(R.id.snapflow_custom_bottom_nav) ?: return
+
+        val tabDownload = findViewById<View>(R.id.snapflow_nav_tab_download)
+        val tabPlay = findViewById<View>(R.id.snapflow_nav_tab_play)
+        val tabSettings = findViewById<View>(R.id.snapflow_nav_tab_settings)
+
+        val pillDownload = findViewById<View>(R.id.snapflow_nav_pill_download)
+        val pillPlay = findViewById<View>(R.id.snapflow_nav_pill_play)
+        val pillSettings = findViewById<View>(R.id.snapflow_nav_pill_settings)
+
+        val iconDownload = findViewById<ImageView>(R.id.snapflow_nav_icon_download)
+        val iconPlay = findViewById<ImageView>(R.id.snapflow_nav_icon_play)
+        val iconSettings = findViewById<ImageView>(R.id.snapflow_nav_icon_settings)
+
+        val labelDownload = findViewById<TextView>(R.id.snapflow_nav_label_download)
+        val labelPlay = findViewById<TextView>(R.id.snapflow_nav_label_play)
+        val labelSettings = findViewById<TextView>(R.id.snapflow_nav_label_settings)
+
+        fun updateNavState(destinationId: Int) {
+            val isHome = (destinationId == R.id.homeFragment)
+            val isPlay = (destinationId == R.id.historyFragment || destinationId == R.id.downloadQueueMainFragment)
+            val isSettings = (destinationId == R.id.moreFragment)
+
+            val activeColor = ContextCompat.getColor(this, R.color.snapflow_accent_gold)
+            val inactiveColor = Color.parseColor("#8E8E98")
+
+            // Download tab
+            pillDownload?.setBackgroundResource(if (isHome) R.drawable.snapflow_nav_pill_active else 0)
+            iconDownload?.imageTintList = ColorStateList.valueOf(if (isHome) activeColor else inactiveColor)
+            labelDownload?.visibility = if (isHome) View.VISIBLE else View.GONE
+
+            // Play tab
+            pillPlay?.setBackgroundResource(if (isPlay) R.drawable.snapflow_nav_pill_active else 0)
+            iconPlay?.imageTintList = ColorStateList.valueOf(if (isPlay) activeColor else inactiveColor)
+            labelPlay?.visibility = if (isPlay) View.VISIBLE else View.GONE
+
+            // Settings tab
+            pillSettings?.setBackgroundResource(if (isSettings) R.drawable.snapflow_nav_pill_active else 0)
+            iconSettings?.imageTintList = ColorStateList.valueOf(if (isSettings) activeColor else inactiveColor)
+            labelSettings?.visibility = if (isSettings) View.VISIBLE else View.GONE
+        }
+
+        tabDownload?.setOnClickListener {
+            if (navController.currentDestination?.id == R.id.homeFragment) {
+                runCatching {
+                    (navHostFragment.childFragmentManager.primaryNavigationFragment as? HomeFragment)?.scrollToTop()
                 }
+            } else {
+                navController.navigate(R.id.homeFragment)
             }
         }
+
+        tabPlay?.setOnClickListener {
+            if (navController.currentDestination?.id != R.id.historyFragment) {
+                navController.navigate(R.id.historyFragment)
+            }
+        }
+
+        tabSettings?.setOnClickListener {
+            val intent = Intent(this, SettingsActivity::class.java)
+            startActivity(intent)
+        }
+
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            updateNavState(destination.id)
+        }
+
+        // Initialize state
+        navController.currentDestination?.id?.let { updateNavState(it) } ?: updateNavState(R.id.homeFragment)
+    }
+
+    private fun styleBottomNavItems(navView: BottomNavigationView) {
+        navView.visibility = View.GONE
     }
 
     companion object {

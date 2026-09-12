@@ -57,11 +57,11 @@
         android:layout_marginHorizontal="20dp"
         android:layout_marginBottom="20dp"
         android:animateLayoutChanges="true"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationView" />
+        app:layout_constraintBottom_toTopOf="@id/snapflow_custom_bottom_nav" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        style="@style/SnapFlow.BottomNav"
+    <!-- Sleek Custom Floating Bottom Navigation Bar (1:1 with Reference Design) -->
+    <LinearLayout
+        android:id="@+id/snapflow_custom_bottom_nav"
         android:layout_width="0dp"
         android:layout_height="62dp"
         android:layout_marginHorizontal="28dp"
@@ -69,14 +69,144 @@
         app:layout_constraintWidth_max="340dp"
         android:background="@drawable/snapflow_floating_nav_bg"
         android:elevation="14dp"
-        app:itemIconTint="@color/snapflow_bottom_nav_icon_color"
-        app:itemTextColor="@color/snapflow_bottom_nav_text_color"
-        app:itemRippleColor="@color/snapflow_accent_gold_glow"
-        app:labelVisibilityMode="selected"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 1. Download Tab (Active by default) -->
+        <FrameLayout
+            android:id="@+id/snapflow_nav_tab_download"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.2"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:id="@+id/snapflow_nav_pill_download"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:background="@drawable/snapflow_nav_pill_active"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:id="@+id/snapflow_nav_icon_download"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_snapflow_nav_download"
+                    app:tint="@color/snapflow_accent_gold"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/snapflow_nav_label_download"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="serif"
+                    android:text="@string/tab_download"
+                    android:textColor="@color/snapflow_accent_gold"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- 2. Play Tab -->
+        <FrameLayout
+            android:id="@+id/snapflow_nav_tab_play"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:id="@+id/snapflow_nav_pill_play"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:id="@+id/snapflow_nav_icon_play"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_snapflow_nav_play"
+                    app:tint="#8E8E98"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/snapflow_nav_label_play"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="serif"
+                    android:text="@string/tab_play"
+                    android:textColor="@color/snapflow_accent_gold"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <!-- 3. Settings Tab -->
+        <FrameLayout
+            android:id="@+id/snapflow_nav_tab_settings"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:focusable="true">
+
+            <LinearLayout
+                android:id="@+id/snapflow_nav_pill_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:id="@+id/snapflow_nav_icon_settings"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_snapflow_nav_settings"
+                    app:tint="#8E8E98"
+                    android:importantForAccessibility="no" />
+
+                <TextView
+                    android:id="@+id/snapflow_nav_label_settings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="serif"
+                    android:text="@string/tab_settings"
+                    android:textColor="@color/snapflow_accent_gold"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <!-- Hidden BottomNavigationView to preserve all background services, badge managers, and legacy callbacks -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
         app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

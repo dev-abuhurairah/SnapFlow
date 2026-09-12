@@ -182,13 +182,16 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
         }
         setupCategoryPillNavigation(view)
         runCatching {
-            view.findViewById<View>(R.id.snaptube_search_circle_btn)?.setOnClickListener {
-                val clips = checkClipboard()
-                if (!clips.isNullOrEmpty() && clips.size == 1) {
-                    searchView?.setText(clips.first())
-                    initSearch(searchView!!)
-                } else {
-                    searchBar?.performClick()
+            view.findViewById<View>(R.id.snaptube_search_circle_btn)?.apply {
+                bringToFront()
+                setOnClickListener {
+                    val clips = checkClipboard()
+                    if (!clips.isNullOrEmpty() && clips.size == 1) {
+                        searchView?.setText(clips.first())
+                        initSearch(searchView!!)
+                    } else {
+                        searchBar?.performClick()
+                    }
                 }
             }
             view.findViewById<View>(R.id.snapflow_paste_clipboard_btn)?.setOnClickListener {
