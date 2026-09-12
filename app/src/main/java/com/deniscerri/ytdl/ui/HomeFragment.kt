@@ -197,13 +197,13 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
                     searchView?.setText(clips.first())
                     initSearch(searchView!!)
                 } else {
-                    Toast.makeText(requireContext(), R.string.no_link_found, Toast.LENGTH_SHORT).show()
+                    android.widget.Toast.makeText(requireContext(), R.string.no_link_found, android.widget.Toast.LENGTH_SHORT).show()
                     searchBar?.performClick()
                 }
             }
             view.findViewById<View>(R.id.snapflow_dev_credit_btn)?.setOnClickListener {
                 try {
-                    val intent = Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/dev-abuhurairah"))
+                    val intent = Intent(Intent.ACTION_VIEW, android.net.Uri.parse("https://github.com/dev-abuhurairah"))
                     startActivity(intent)
                 } catch (e: Exception) {}
             }
