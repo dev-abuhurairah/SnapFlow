@@ -668,10 +668,17 @@ class MainActivity : BaseActivity() {
         navView.post {
             runCatching {
                 val menuView = navView.getChildAt(0) as? ViewGroup ?: return@post
+                val size = (44 * navView.resources.displayMetrics.density).toInt()
                 for (i in 0 until menuView.childCount) {
                     val itemView = menuView.getChildAt(i) as? ViewGroup ?: continue
                     val iconContainer = itemView.findViewById<View>(com.google.android.material.R.id.navigation_bar_item_icon_container)
                     iconContainer?.let { container ->
+                        val lp = container.layoutParams
+                        if (lp.width != size || lp.height != size) {
+                            lp.width = size
+                            lp.height = size
+                            container.layoutParams = lp
+                        }
                         val isSelected = itemView.isSelected
                         if (!isSelected) {
                             container.setBackgroundResource(R.drawable.snapflow_nav_circle_inactive)

@@ -246,6 +246,10 @@
     <!-- SnapFlow Bottom Navigation Floating Capsule Styles -->
     <style name="SnapFlow.BottomNav" parent="Widget.Material3.BottomNavigationView">
         <item name="itemActiveIndicatorStyle">@style/SnapFlow.BottomNav.ActiveIndicator</item>
+        <item name="indicatorWidth">44dp</item>
+        <item name="indicatorHeight">44dp</item>
+        <item name="itemPaddingTop">6dp</item>
+        <item name="itemPaddingBottom">6dp</item>
         <item name="itemIconTint">@color/snapflow_bottom_nav_icon_color</item>
         <item name="itemTextColor">@color/snapflow_bottom_nav_text_color</item>
         <item name="itemRippleColor">@color/snapflow_accent_gold_glow</item>
