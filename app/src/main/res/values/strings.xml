@@ -5,6 +5,8 @@
     <string name="developer_credit">Designed &amp; Crafted by dev-abuhurairah</string>
     <string name="developer_github">https://github.com/dev-abuhurairah</string>
     <string name="search_to_download">Search to download</string>
+    <string name="paste_link_or_search">Paste link or search to download</string>
+    <string name="snapflow_tagline">FAST  •  SIMPLE  •  DOWNLOAD</string>
     <string name="download_video_as">Download video as</string>
     <string name="tab_download">Download</string>
     <string name="tab_play">Play</string>

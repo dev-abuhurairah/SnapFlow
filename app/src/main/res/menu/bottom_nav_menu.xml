@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android" android:theme="@style/BaseTheme">
 
     <item android:title="@string/tab_download"
-        android:icon="@drawable/ic_snaptube_search_nav"
+        android:icon="@drawable/ic_snapflow_nav_download"
         android:id="@+id/homeFragment"/>
 
     <item android:title="@string/tab_play"
-        android:icon="@drawable/ic_snaptube_play"
+        android:icon="@drawable/ic_snapflow_nav_play"
         android:id="@+id/historyFragment"/>
 
     <item android:title="@string/tab_settings"
-        android:icon="@drawable/ic_settings"
+        android:icon="@drawable/ic_snapflow_nav_settings"
         android:id="@+id/moreFragment"/>
 
     <item android:title="@string/queue"

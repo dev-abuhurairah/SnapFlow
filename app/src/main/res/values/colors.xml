@@ -422,4 +422,18 @@
     <color name="monochrome_theme_dark_inverseSurface">#C3C3C3</color>
     <color name="monochrome_theme_dark_inversePrimary">#707070</color>
 
+    <!-- SnapFlow Premium Design System Tokens -->
+    <color name="snapflow_bg">#0E0E12</color>
+    <color name="snapflow_surface">#18181F</color>
+    <color name="snapflow_surface_variant">#1E1E26</color>
+    <color name="snapflow_accent_gold">#FFB800</color>
+    <color name="snapflow_accent_gold_glow">#33FFB800</color>
+    <color name="snapflow_text_primary">#F5F5F7</color>
+    <color name="snapflow_text_secondary">#8E8E98</color>
+    <color name="snapflow_text_muted">#5C5C66</color>
+    <color name="snapflow_border">#282834</color>
+    <color name="snapflow_border_subtle">#1F1F28</color>
+    <color name="snapflow_circle_inactive">#22222A</color>
+    <color name="snapflow_black">#101014</color>
+
 </resources>

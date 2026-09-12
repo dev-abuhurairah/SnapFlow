@@ -180,9 +180,16 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
                 android.view.animation.AnimationUtils.loadAnimation(requireContext(), R.anim.splash_fade_in)
             )
         }
+        setupCategoryPillNavigation(view)
         runCatching {
             view.findViewById<View>(R.id.snaptube_search_circle_btn)?.setOnClickListener {
-                searchBar?.performClick()
+                val clips = checkClipboard()
+                if (!clips.isNullOrEmpty() && clips.size == 1) {
+                    searchView?.setText(clips.first())
+                    initSearch(searchView!!)
+                } else {
+                    searchBar?.performClick()
+                }
             }
         }
 
@@ -1090,5 +1097,56 @@ class HomeFragment : Fragment(), HomeAdapter.OnItemClickListener, SearchSuggesti
         }
 
         playlistNameFilterScrollView.isVisible = true
+    }
+
+    private fun setupCategoryPillNavigation(view: View) {
+        val catSearch = view.findViewById<View>(R.id.snapflow_cat_search) ?: return
+        val catYoutube = view.findViewById<View>(R.id.snapflow_cat_youtube) ?: return
+        val catMusic = view.findViewById<View>(R.id.snapflow_cat_music) ?: return
+        val catMore = view.findViewById<View>(R.id.snapflow_cat_more) ?: return
+
+        fun updatePillVisuals(activeId: Int) {
+            val pills = listOf(
+                Triple(catSearch, R.id.snapflow_cat_search_icon, R.id.snapflow_cat_search_text),
+                Triple(catYoutube, R.id.snapflow_cat_youtube_icon, R.id.snapflow_cat_youtube_text),
+                Triple(catMusic, R.id.snapflow_cat_music_icon, R.id.snapflow_cat_music_text),
+                Triple(catMore, R.id.snapflow_cat_more_icon, R.id.snapflow_cat_more_text)
+            )
+
+            for ((container, iconId, textId) in pills) {
+                val isActive = container.id == activeId
+                container.setBackgroundResource(
+                    if (isActive) R.drawable.snapflow_cat_pill_active
+                    else R.drawable.snapflow_cat_pill_inactive
+                )
+                val iconView = container.findViewById<android.widget.ImageView>(iconId)
+                val textView = container.findViewById<android.widget.TextView>(textId)
+                val color = if (isActive) Color.parseColor("#101014") else Color.parseColor("#A5A5B2")
+                iconView?.imageTintList = ColorStateList.valueOf(color)
+                textView?.setTextColor(color)
+            }
+        }
+
+        catSearch.setOnClickListener {
+            updatePillVisuals(R.id.snapflow_cat_search)
+            scrollToTop()
+        }
+
+        catYoutube.setOnClickListener {
+            updatePillVisuals(R.id.snapflow_cat_youtube)
+            sharedPreferences?.edit()?.putString("search_engine", "ytsearch")?.apply()
+            searchBar?.performClick()
+        }
+
+        catMusic.setOnClickListener {
+            updatePillVisuals(R.id.snapflow_cat_music)
+            sharedPreferences?.edit()?.putString("search_engine", "ytsearchmusic")?.apply()
+            searchBar?.performClick()
+        }
+
+        catMore.setOnClickListener {
+            updatePillVisuals(R.id.snapflow_cat_more)
+            searchBar?.performClick()
+        }
     }
 }

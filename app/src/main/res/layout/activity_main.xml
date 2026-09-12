@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/snapflow_bg"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
@@ -31,8 +32,19 @@
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/incognito_header"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/incognito_header" />
+
+    <!-- Ambient Dark Wave & Warm Golden Backlight Glow behind bottom nav -->
+    <ImageView
+        android:id="@+id/bottom_ambient_glow"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:src="@drawable/snapflow_bottom_ambient_glow"
+        android:scaleType="fitXY"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/notification_container"
@@ -48,21 +60,22 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"
+        style="@style/SnapFlow.BottomNav"
         android:layout_width="0dp"
-        android:layout_height="62dp"
-        android:layout_marginHorizontal="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="28dp"
+        android:layout_marginBottom="18dp"
         app:layout_constraintWidth_max="340dp"
-        android:background="@drawable/snaptube_floating_nav_bg"
-        android:elevation="12dp"
-        app:itemIconTint="@color/snaptube_bottom_nav_color"
-        app:itemTextColor="@color/snaptube_bottom_nav_color"
-        app:itemRippleColor="#33FFB800"
+        android:background="@drawable/snapflow_floating_nav_bg"
+        android:elevation="14dp"
+        app:itemIconTint="@color/snapflow_bottom_nav_icon_color"
+        app:itemTextColor="@color/snapflow_bottom_nav_text_color"
+        app:itemRippleColor="@color/snapflow_accent_gold_glow"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
-        app:menu="@menu/bottom_nav_menu"/>
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

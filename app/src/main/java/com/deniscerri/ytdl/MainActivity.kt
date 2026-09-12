@@ -14,6 +14,7 @@ import android.os.Looper
 import android.util.Log
 import android.view.Gravity
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowInsets
 import android.view.inputmethod.InputMethodManager
 import android.widget.CheckBox
@@ -222,6 +223,8 @@ class MainActivity : BaseActivity() {
             }
 
             val showingNavbarItems = NavbarUtil.getNavBarItems(this@MainActivity).filter { it.isVisible }.map { it.itemId }
+            val bnv = this as? BottomNavigationView
+            bnv?.let { styleBottomNavItems(it) }
             navController.addOnDestinationChangedListener { _, destination, _ ->
                 Handler(Looper.getMainLooper()).post {
                     if (showingNavbarItems.contains(destination.id)) {
@@ -229,6 +232,7 @@ class MainActivity : BaseActivity() {
                     }else{
                         hideBottomNavigation()
                     }
+                    bnv?.let { styleBottomNavItems(it) }
                 }
 
             }
@@ -660,6 +664,25 @@ class MainActivity : BaseActivity() {
         }
     }
 
+    private fun styleBottomNavItems(navView: BottomNavigationView) {
+        navView.post {
+            runCatching {
+                val menuView = navView.getChildAt(0) as? ViewGroup ?: return@post
+                for (i in 0 until menuView.childCount) {
+                    val itemView = menuView.getChildAt(i) as? ViewGroup ?: continue
+                    val iconContainer = itemView.findViewById<View>(com.google.android.material.R.id.navigation_bar_item_icon_container)
+                    iconContainer?.let { container ->
+                        val isSelected = itemView.isSelected
+                        if (!isSelected) {
+                            container.setBackgroundResource(R.drawable.snapflow_nav_circle_inactive)
+                        } else {
+                            container.background = null
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     companion object {
         private const val TAG = "MainActivity"

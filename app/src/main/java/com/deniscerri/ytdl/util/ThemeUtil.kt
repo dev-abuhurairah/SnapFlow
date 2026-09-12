@@ -155,7 +155,7 @@ object ThemeUtil {
     fun getStyledAppName(context: Context): Spanned {
         val colorPrimary = getThemeColor(context, androidx.appcompat.R.attr.colorPrimaryDark)
         val hexColor = "#%06X".format(0xFFFFFF and colorPrimary)
-        return "<span style='color:$hexColor;font-weight:bold;'>Snap</span><span style='font-weight:bold;'>Flow</span>"
+        return "<span style='color:#FFFFFF;font-weight:bold;'>Snap</span><span style='color:$hexColor;font-weight:bold;'>Flow</span>"
             .parseAsHtml(HtmlCompat.FROM_HTML_MODE_COMPACT)
     }
 

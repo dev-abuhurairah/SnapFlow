@@ -243,4 +243,38 @@
 
     </style>
 
+    <!-- SnapFlow Bottom Navigation Floating Capsule Styles -->
+    <style name="SnapFlow.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="itemActiveIndicatorStyle">@style/SnapFlow.BottomNav.ActiveIndicator</item>
+        <item name="itemIconTint">@color/snapflow_bottom_nav_icon_color</item>
+        <item name="itemTextColor">@color/snapflow_bottom_nav_text_color</item>
+        <item name="itemRippleColor">@color/snapflow_accent_gold_glow</item>
+        <item name="itemTextAppearanceActive">@style/SnapFlow.BottomNav.Text.Active</item>
+        <item name="itemTextAppearanceInactive">@style/SnapFlow.BottomNav.Text.Inactive</item>
+        <item name="android:background">@drawable/snapflow_floating_nav_bg</item>
+    </style>
+
+    <style name="SnapFlow.BottomNav.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:width">44dp</item>
+        <item name="android:height">44dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.SnapFlow.Circle</item>
+        <item name="android:color">@color/snapflow_accent_gold</item>
+    </style>
+
+    <style name="ShapeAppearance.SnapFlow.Circle" parent="ShapeAppearance.Material3.Corner.Full">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="SnapFlow.BottomNav.Text.Active" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/snapflow_accent_gold</item>
+    </style>
+
+    <style name="SnapFlow.BottomNav.Text.Inactive" parent="TextAppearance.Material3.LabelSmall">
+        <item name="android:textSize">11sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/snapflow_text_secondary</item>
+    </style>
+
 </resources>

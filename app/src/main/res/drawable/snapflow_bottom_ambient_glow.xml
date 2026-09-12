@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="360dp"
+    android:height="160dp"
+    android:viewportWidth="360"
+    android:viewportHeight="160">
+
+    <!-- Ambient Dark Wave -->
+    <path
+        android:pathData="M0,160 L0,120 C60,95 180,110 360,65 L360,160 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="0"
+                android:startY="100"
+                android:endX="360"
+                android:endY="160">
+                <item android:offset="0.0" android:color="#201C1C24" />
+                <item android:offset="1.0" android:color="#000E0E12" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Warm Golden Ambient Glow at Bottom Left -->
+    <path
+        android:pathData="M0,160 L0,105 C40,95 90,120 140,160 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="radial"
+                android:centerX="0"
+                android:centerY="160"
+                android:gradientRadius="130">
+                <item android:offset="0.0" android:color="#45FFB800" />
+                <item android:offset="0.5" android:color="#18FFB800" />
+                <item android:offset="1.0" android:color="#00FFB800" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>
