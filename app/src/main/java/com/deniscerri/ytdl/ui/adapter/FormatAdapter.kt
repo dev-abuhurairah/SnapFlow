@@ -86,6 +86,7 @@ class FormatAdapter(onItemClickListener: OnItemClickListener, activity: Activity
         val card = holder.item ?: return
         //card.popup()
         UiUtil.populateFormatCard(activity, card, item)
+        card.findViewById<View>(R.id.btn_change_quality_indicator)?.visibility = View.GONE
         card.isChecked = selectedVideoFormat == item || selectedAudioFormats.any { it == item }
 
         card.setOnClickListener {

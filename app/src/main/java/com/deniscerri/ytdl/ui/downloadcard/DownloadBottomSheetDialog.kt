@@ -340,6 +340,7 @@ class DownloadBottomSheetDialog : BottomSheetDialogFragment() {
                                 Toast.makeText(requireContext(), result.message, Toast.LENGTH_LONG).show()
                             }
 
+                            resultViewModel.deleteAll()
                             withContext(Dispatchers.Main){
                                 handleDuplicatesAndDismiss(result.duplicateDownloadIDs)
                             }
@@ -355,6 +356,7 @@ class DownloadBottomSheetDialog : BottomSheetDialogFragment() {
                             Toast.makeText(requireContext(), result.message, Toast.LENGTH_LONG).show()
                         }
 
+                        resultViewModel.deleteAll()
                         withContext(Dispatchers.Main){
                             handleDuplicatesAndDismiss(result.duplicateDownloadIDs)
                         }
@@ -381,6 +383,7 @@ class DownloadBottomSheetDialog : BottomSheetDialogFragment() {
                             val result = withContext(Dispatchers.IO) {
                                 downloadViewModel.queueDownloads(itemsToQueue, ignoreDuplicates)
                             }
+                            resultViewModel.deleteAll()
                             withContext(Dispatchers.Main){
                                 handleDuplicatesAndDismiss(result.duplicateDownloadIDs)
                             }
@@ -390,6 +393,7 @@ class DownloadBottomSheetDialog : BottomSheetDialogFragment() {
                     val result = withContext(Dispatchers.IO) {
                         downloadViewModel.queueDownloads(listOf(item), ignoreDuplicates)
                     }
+                    resultViewModel.deleteAll()
                     handleDuplicatesAndDismiss(result.duplicateDownloadIDs)
                 }
             }

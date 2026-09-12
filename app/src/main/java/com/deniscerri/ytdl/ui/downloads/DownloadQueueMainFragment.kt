@@ -73,7 +73,7 @@ class DownloadQueueMainFragment : Fragment(){
         if (isInNavBar) {
             topAppBar.navigationIcon = null
         }else{
-            mainActivity.hideBottomNavigation()
+            mainActivity.showBottomNavigation()
         }
         topAppBar.setNavigationOnClickListener {
             mainActivity.onBackPressedDispatcher.onBackPressed()

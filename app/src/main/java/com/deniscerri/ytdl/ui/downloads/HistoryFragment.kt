@@ -202,8 +202,25 @@ class HistoryFragment : Fragment(), HistoryPaginatedAdapter.OnItemClickListener{
             }
         }
 
-        downloadViewModel = ViewModelProvider(this)[DownloadViewModel::class.java]
+        downloadViewModel = ViewModelProvider(requireActivity())[DownloadViewModel::class.java]
         downloadCardViewModel = ViewModelProvider(requireActivity())[DownloadCardViewModel::class.java]
+
+        val activeDownloadsBanner = fragmentView.findViewById<View>(R.id.snapflow_active_downloads_banner)
+        val activeDownloadsText = fragmentView.findViewById<TextView>(R.id.snapflow_active_downloads_text)
+        activeDownloadsBanner?.setOnClickListener {
+            findNavController().navigate(R.id.downloadQueueMainFragment)
+        }
+        lifecycleScope.launch {
+            downloadViewModel.activePausedDownloadsCount.collectLatest { count ->
+                if (count > 0) {
+                    activeDownloadsBanner?.visibility = View.VISIBLE
+                    activeDownloadsText?.text = "$count video${if (count > 1) "s" else ""} downloading in background"
+                } else {
+                    activeDownloadsBanner?.visibility = View.GONE
+                }
+            }
+        }
+
         lifecycleScope.launch{
             downloadViewModel.alreadyExistsUiState.collectLatest { res ->
                 if (res.isNotEmpty()){
@@ -482,6 +499,19 @@ class HistoryFragment : Fragment(), HistoryPaginatedAdapter.OnItemClickListener{
         lifecycleScope.launch {
             val item = withContext(Dispatchers.IO){
                 historyViewModel.getByID(itemID)
+            } ?: return@launch
+
+            if (filePresent && item.downloadPath.isNotEmpty()) {
+                try {
+                    if (item.downloadPath.size == 1) {
+                        FileUtil.openFileIntent(requireActivity(), item.downloadPath.first())
+                    } else {
+                        UiUtil.openMultipleFilesIntent(requireActivity(), item.downloadPath)
+                    }
+                    return@launch
+                } catch (e: Exception) {
+                    // Fallback to options if opening failed
+                }
             }
 
             UiUtil.showHistoryItemDetailsCard(item, requireActivity(), filePresent, sharedPreferences,

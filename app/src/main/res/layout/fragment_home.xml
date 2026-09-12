@@ -275,148 +275,57 @@
             app:title="@string/app_name"
             android:layout_height="wrap_content" />
 
-        <!-- VidSnap Hero & Backdrop Section (Matches Reference Screenshot) -->
+        <!-- SnapFlow Hero Section -->
         <FrameLayout
             android:id="@+id/snaptube_hero_section"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp">
 
-            <!-- Social Media Badges Collage Backdrop (Artistic harmonious cluster behind SnapFlow) -->
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="170dp"
-                android:clipChildren="false"
-                android:clipToPadding="false"
-                android:importantForAccessibility="no">
+            <!-- Ambient Brand Glow -->
+            <View
+                android:layout_width="260dp"
+                android:layout_height="140dp"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/snapflow_hero_glow"
+                android:importantForAccessibility="no" />
 
-                <!-- Ambient Radial Glow -->
-                <View
-                    android:layout_width="180dp"
-                    android:layout_height="150dp"
-                    android:layout_centerInParent="true"
-                    android:background="@drawable/snapflow_hero_glow" />
-
-                <!-- 1. Top-left Facebook Royal Blue Tile -->
-                <FrameLayout
-                    android:layout_width="54dp"
-                    android:layout_height="54dp"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="24dp"
-                    android:layout_marginTop="8dp"
-                    android:rotation="-10"
-                    android:background="@drawable/snapflow_tile_fb">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="f"
-                        android:textColor="#FFFFFF"
-                        android:textSize="32sp"
-                        android:fontFamily="sans-serif-bold" />
-                </FrameLayout>
-
-                <!-- 2. Top-center Emerald Green WhatsApp Tile -->
-                <FrameLayout
-                    android:layout_width="52dp"
-                    android:layout_height="52dp"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginStart="106dp"
-                    android:layout_marginTop="4dp"
-                    android:rotation="5"
-                    android:background="@drawable/snapflow_tile_green">
-
-                    <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_snapflow_tile_chat"
-                        app:tint="#FFFFFF"
-                        android:importantForAccessibility="no" />
-                </FrameLayout>
-
-                <!-- 3. Top-right Crimson YouTube Tile -->
-                <FrameLayout
-                    android:layout_width="54dp"
-                    android:layout_height="54dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginTop="8dp"
-                    android:rotation="9"
-                    android:background="@drawable/snapflow_tile_yt">
-
-                    <ImageView
-                        android:layout_width="18dp"
-                        android:layout_height="18dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_snapflow_play_arrow"
-                        app:tint="#FFFFFF"
-                        android:importantForAccessibility="no" />
-                </FrameLayout>
-
-                <!-- 4. Mid-left Radiant Instagram Gradient Tile -->
-                <FrameLayout
-                    android:layout_width="52dp"
-                    android:layout_height="52dp"
-                    android:layout_marginStart="64dp"
-                    android:layout_marginTop="64dp"
-                    android:rotation="-6"
-                    android:background="@drawable/snapflow_tile_insta">
-
-                    <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_snapflow_tile_camera"
-                        app:tint="#FFFFFF"
-                        android:importantForAccessibility="no" />
-                </FrameLayout>
-
-                <!-- 5. Mid-right Coral Share Tile -->
-                <FrameLayout
-                    android:layout_width="52dp"
-                    android:layout_height="52dp"
-                    android:layout_alignParentEnd="true"
-                    android:layout_marginEnd="64dp"
-                    android:layout_marginTop="64dp"
-                    android:rotation="7"
-                    android:background="@drawable/snapflow_tile_share">
-
-                    <ImageView
-                        android:layout_width="22dp"
-                        android:layout_height="22dp"
-                        android:layout_gravity="center"
-                        android:src="@drawable/ic_snapflow_tile_share"
-                        app:tint="#FFFFFF"
-                        android:importantForAccessibility="no" />
-                </FrameLayout>
-
-            </RelativeLayout>
-
-            <!-- Foreground Content: SnapFlow Title, Capsule Search Bar, and Action Pills -->
+            <!-- Foreground Content: SnapFlow Title, Search Bar, Paste Pill, Platform Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
                 android:orientation="vertical"
-                android:paddingTop="26dp"
-                android:paddingBottom="24dp">
+                android:paddingTop="16dp"
+                android:paddingBottom="12dp">
 
-                <!-- SnapFlow Hero Title in Golden Serif -->
-                <TextView
-                    android:id="@+id/snaptube_hero_title"
+                <!-- SnapFlow Brand Header with Glowing Emblem & Gold Serif Title -->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/snapflow_brand_title"
-                    android:textColor="#FFCC00"
-                    android:textSize="44sp"
-                    android:textStyle="bold"
-                    android:fontFamily="serif"
-                    android:letterSpacing="0.02"
-                    android:layout_marginBottom="24dp" />
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="20dp">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_marginEnd="10dp"
+                        android:src="@drawable/ic_snapflow_brand_emblem"
+                        android:importantForAccessibility="no" />
+
+                    <TextView
+                        android:id="@+id/snaptube_hero_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/snapflow_brand_title"
+                        android:textColor="#FFCC00"
+                        android:textSize="40sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif"
+                        android:letterSpacing="0.02" />
+                </LinearLayout>
 
                 <!-- Capsule Search Bar with Left Download Arrow and Right Yellow Circular Search Button -->
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -484,18 +393,25 @@
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                <!-- Paste Link from Clipboard Pill Button -->
+                <!-- Paste Link from Clipboard Pill Button - Perfectly Aligned with Search Bar -->
                 <LinearLayout
                     android:id="@+id/snapflow_paste_clipboard_btn"
-                    android:layout_width="wrap_content"
-                    android:layout_height="44dp"
-                    android:layout_marginTop="18dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginTop="12dp"
                     android:background="@drawable/snapflow_paste_pill_bg"
                     android:clickable="true"
                     android:focusable="true"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:paddingHorizontal="24dp">
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/ic_snapflow_paste"
+                        android:importantForAccessibility="no" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -503,21 +419,129 @@
                         android:text="@string/paste_link_from_clipboard"
                         android:textColor="#FFCC00"
                         android:textSize="14sp"
+                        android:textStyle="bold"
                         android:fontFamily="serif" />
+                </LinearLayout>
+
+                <!-- Platform Quick Access Shortcuts Grid - Clean Horizontal Badges -->
+                <LinearLayout
+                    android:id="@+id/snaptube_platform_shortcuts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="18dp"
+                    android:paddingHorizontal="20dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_platform_youtube" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="YouTube"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_platform_facebook" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Facebook"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_platform_instagram" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Instagram"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_platform_tiktok" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="TikTok"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_platform_whatsapp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="WhatsApp"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+
                 </LinearLayout>
 
                 <!-- Dev Credit Pill: ⚡ Built with ❤️ by dev-abuhurairah -->
                 <LinearLayout
                     android:id="@+id/snapflow_dev_credit_btn"
                     android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="14dp"
                     android:background="@drawable/snapflow_credit_pill_bg"
                     android:clickable="true"
                     android:focusable="true"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:paddingHorizontal="20dp">
+                    android:paddingHorizontal="16dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -531,114 +555,6 @@
             </LinearLayout>
 
         </FrameLayout>
-
-        <!-- Platform Quick Access Shortcuts Grid (Hidden to match Screenshot 1) -->
-        <LinearLayout
-            android:id="@+id/snaptube_platform_shortcuts"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:visibility="gone"
-            android:orientation="horizontal"
-            android:paddingHorizontal="16dp"
-            android:paddingBottom="16dp">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="44dp"
-                    android:layout_height="44dp"
-                    android:src="@drawable/ic_platform_youtube" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="YouTube"
-                    android:textColor="#AAAAAA"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="44dp"
-                    android:layout_height="44dp"
-                    android:src="@drawable/ic_platform_facebook" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Facebook"
-                    android:textColor="#AAAAAA"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="44dp"
-                    android:layout_height="44dp"
-                    android:src="@drawable/ic_platform_instagram" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="Instagram"
-                    android:textColor="#AAAAAA"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="44dp"
-                    android:layout_height="44dp"
-                    android:src="@drawable/ic_platform_tiktok" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="TikTok"
-                    android:textColor="#AAAAAA"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-                <ImageView
-                    android:layout_width="44dp"
-                    android:layout_height="44dp"
-                    android:src="@drawable/ic_platform_whatsapp" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:text="WhatsApp"
-                    android:textColor="#AAAAAA"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-        </LinearLayout>
 
         <HorizontalScrollView
             android:id="@+id/playlist_selection_chips_scrollview"

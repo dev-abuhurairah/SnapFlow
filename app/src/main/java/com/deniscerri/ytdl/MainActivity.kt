@@ -118,6 +118,7 @@ class MainActivity : BaseActivity() {
     private var loadingRuntimeDialog: androidx.appcompat.app.AlertDialog? = null
 
     private lateinit var installLauncher: ActivityResultLauncher<Intent>
+    private var activeDownloadsCount: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -215,6 +216,7 @@ class MainActivity : BaseActivity() {
             }
             lifecycleScope.launch {
                 downloadViewModel.activePausedDownloadsCount.collectLatest {
+                    activeDownloadsCount = it
                     if (it == 0) {
                         activeDownloadsBadge.isVisible = false
                         activeDownloadsBadge.clearNumber()
@@ -717,8 +719,17 @@ class MainActivity : BaseActivity() {
         }
 
         tabPlay?.setOnClickListener {
-            if (navController.currentDestination?.id != R.id.historyFragment) {
+            val curr = navController.currentDestination?.id
+            if (curr == R.id.historyFragment) {
+                navController.navigate(R.id.downloadQueueMainFragment)
+            } else if (curr == R.id.downloadQueueMainFragment) {
                 navController.navigate(R.id.historyFragment)
+            } else {
+                if (activeDownloadsCount > 0) {
+                    navController.navigate(R.id.downloadQueueMainFragment)
+                } else {
+                    navController.navigate(R.id.historyFragment)
+                }
             }
         }
 

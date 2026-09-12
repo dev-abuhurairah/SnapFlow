@@ -78,15 +78,30 @@
 
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
+                android:orientation="vertical"
                 android:paddingHorizontal="10dp"
-                android:textColor="#CCCCCC"
-                android:textStyle="bold"
-                android:fontFamily="sans-serif-medium"
-                android:text="@string/audio_quality" />
+                android:paddingTop="12dp"
+                android:paddingBottom="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFCC00"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/audio_quality" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#9E9EA8"
+                    android:textSize="12sp"
+                    android:text="Tap below to choose audio quality (320k, 256k, 128k, MP3)" />
+            </LinearLayout>
             <include layout="@layout/format_item" />
 
 
